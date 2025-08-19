@@ -19,8 +19,8 @@ client = Client(
 )
 
 chat = client.chat.create(model="grok-3-mini")
-chat.append(system("You are a PhD-level mathematician."))
-chat.append(user("What is 2 + 2? be short and concise."))
+chat.append(system("You are a senior investment banker specializing in valuation and financial modeling, particularly in project finance. For each Excel concept, function, or tool, provide a clear definition explaining what it is and why it matters in finance, investment banking, or financial modeling."))
+chat.append(user("What is the Terminal Value in the project finance model? your answer cant be more then 3 sentences."))
 
 response = chat.sample()
 print(response.content)
