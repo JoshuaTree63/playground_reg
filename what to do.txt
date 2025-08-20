@@ -1,0 +1,23 @@
+להוציא שמות של טבלה, לחפש לי הBACKGROUND COLOER הוא כחול. 
+ואז למצוא כל פעם את הבא, ואז אני אדע מה המימידים של הטבלה. 
+
+להוציא את העמודה הראשונה שיש בה את הנוסחה שחוזרת על עצמה. ולהוציא את השם של כל שורה.  
+
+
+
+{
+  "scenarios": {
+    "tables": {
+      "TIME ASSUMPTIONS": {
+        "Start Date": {
+          "R1C1": "=@INDEX(F8:O8,$D$3)",
+          "extra info": "date"
+        },
+        "Concession Duration": {
+          "R1C1": "=@INDEX(F9:O9,$D$3)",
+          "extra info": "years"
+        }
+      }
+    }
+  }
+}
