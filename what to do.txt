@@ -11,13 +11,18 @@
       "TIME ASSUMPTIONS": {
         "Start Date": {
           "R1C1": "=@INDEX(F8:O8,$D$3)",
-          "extra info": "date"
+          "extra info": "date",
+          "row numbers": 2,
+          "column numbers": 100
         },
         "Concession Duration": {
           "R1C1": "=@INDEX(F9:O9,$D$3)",
-          "extra info": "years"
+          "extra info": "years",
+          "row numbers": 2,
+          "column numbers": 100
         }
       }
     }
   }
 }
+
