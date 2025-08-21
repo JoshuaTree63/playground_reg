@@ -8,12 +8,42 @@ input_path = "/Users/joshualevi/git_projects/playground_reg/debug_20250819_22552
 with open(input_path, "r") as f:
     data = json.load(f)
 
-# Extract sheet names and build dict
 sheets_dict = {}
+
+# Words/phrases to ignore as table headers
+ignore_headers = {"Scenario Chosen"}
+
+# Iterate worksheets
 if "worksheets" in data:
     for ws in data["worksheets"]:
         if "name" in ws:
-            sheets_dict[ws["name"]] = {}  # empty dict for each sheet
+            sheet_name = ws["name"]
+            tables = {}
+
+            # Look through each cell for table headers
+            for addr, cell in ws.get("cells", {}).items():
+                fmt = cell.get("format", {})
+                font = fmt.get("font", {})
+
+                # Detect header by style
+                if fmt.get("backgroundColor") == "#3366FF" and font.get("color") == "#FFFFFF":
+                    raw_value = cell.get("formulaR1C1", "")
+
+                    # Convert to string safely
+                    table_name = str(raw_value).strip()
+
+                    # Skip invalid names
+                    if not table_name:
+                        continue
+                    if table_name in ignore_headers:
+                        continue
+                    if table_name.startswith("="):  # skip formulas
+                        continue
+
+                    # Add to table dict
+                    tables[table_name] = {}
+
+            sheets_dict[sheet_name] = {"tables": tables}
 
 # Define output path
 output_path = os.path.join(
@@ -25,4 +55,4 @@ output_path = os.path.join(
 with open(output_path, "w") as f:
     json.dump(sheets_dict, f, indent=2)
 
-print(f"✅ New JSON with sheet names saved to {output_path}")
+print(f"✅ New JSON with sheet names + clean table names saved to {output_path}")

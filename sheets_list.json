@@ -1,12 +1,75 @@
 {
-  "scenarios": {},
-  "time_macro": {},
-  "construction": {},
-  "operation": {},
-  "amortization": {},
-  "debt": {},
-  "p and l": {},
-  "cash flow": {},
-  "balance sheet": {},
-  "ratios": {}
+  "scenarios": {
+    "tables": {
+      "1": {},
+      "TIME ASSUMPTIONS": {},
+      "TRAFFIC & REVENUE ASSUMPTIONS": {},
+      "COSTS DURING CONSTRUCTION": {},
+      "COSTS DURING OPERATION": {},
+      "PROJECT FINANCING": {},
+      "TAX & ACCOUNTING ASSUMPTIONS": {}
+    }
+  },
+  "time_macro": {
+    "tables": {
+      "Date": {},
+      "Flags": {},
+      "DEBT TIMELINE": {}
+    }
+  },
+  "construction": {
+    "tables": {
+      "Date": {},
+      "CAPEX": {},
+      "Uses": {},
+      "Sources": {},
+      "Debt Drawdown Schedule": {},
+      "Uses of funds for circularity breakdown purpose": {},
+      "CHECK": {}
+    }
+  },
+  "operation": {
+    "tables": {
+      "Date": {},
+      "TRAFFIC & REVENUE ASSUMPTIONS": {},
+      "COSTS": {}
+    }
+  },
+  "amortization": {
+    "tables": {
+      "Date": {},
+      "D&A": {}
+    }
+  },
+  "debt": {
+    "tables": {
+      "Date": {},
+      "Debt Repayment Schedule": {}
+    }
+  },
+  "p and l": {
+    "tables": {
+      "Date": {},
+      "P&L": {}
+    }
+  },
+  "cash flow": {
+    "tables": {
+      "Date": {},
+      "Cashflow Statement": {}
+    }
+  },
+  "balance sheet": {
+    "tables": {
+      "Date": {},
+      "Balance Sheet": {}
+    }
+  },
+  "ratios": {
+    "tables": {
+      "Date": {},
+      "Project IRR": {},
+      "Equity IRR": {}
+    }
+  }
 }

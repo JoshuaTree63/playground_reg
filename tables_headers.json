@@ -1,0 +1,1304 @@
+[
+  {
+    "formulaR1C1": "Scenario Chosen"
+  },
+  {
+    "formulaR1C1": 1
+  },
+  {
+    "formulaR1C1": "TIME ASSUMPTIONS"
+  },
+  {
+    "formulaR1C1": "TRAFFIC & REVENUE ASSUMPTIONS"
+  },
+  {
+    "formulaR1C1": "COSTS DURING CONSTRUCTION"
+  },
+  {
+    "formulaR1C1": "COSTS DURING OPERATION"
+  },
+  {
+    "formulaR1C1": "PROJECT FINANCING"
+  },
+  {
+    "formulaR1C1": "TAX & ACCOUNTING ASSUMPTIONS"
+  },
+  {
+    "formulaR1C1": "Date"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(scenarios!R[5]C[-1],0)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "=EOMONTH(RC[-1],12)"
+  },
+  {
+    "formulaR1C1": "Flags"
+  },
+  {
+    "formulaR1C1": "DEBT TIMELINE"
+  },
+  {
+    "formulaR1C1": "Date"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "CAPEX"
+  },
+  {
+    "formulaR1C1": "Uses"
+  },
+  {
+    "formulaR1C1": "Sources"
+  },
+  {
+    "formulaR1C1": "Debt Drawdown Schedule"
+  },
+  {
+    "formulaR1C1": "Uses of funds for circularity breakdown purpose"
+  },
+  {
+    "formulaR1C1": "CHECK"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "=R[-21]C-R[-16]C<0.01"
+  },
+  {
+    "formulaR1C1": "Date"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "TRAFFIC & REVENUE ASSUMPTIONS"
+  },
+  {
+    "formulaR1C1": "COSTS"
+  },
+  {
+    "formulaR1C1": "Date"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "D&A"
+  },
+  {
+    "formulaR1C1": "Date"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "Debt Repayment Schedule"
+  },
+  {
+    "formulaR1C1": "Date"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "P&L"
+  },
+  {
+    "formulaR1C1": "Date"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "Cashflow Statement"
+  },
+  {
+    "formulaR1C1": "Date"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "Balance Sheet"
+  },
+  {
+    "formulaR1C1": "Date"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "=+time_macro!R[1]C[-1]"
+  },
+  {
+    "formulaR1C1": "Project IRR"
+  },
+  {
+    "formulaR1C1": "Equity IRR"
+  }
+]
