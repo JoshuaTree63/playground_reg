@@ -12,11 +12,11 @@ with open(input_path, "r") as f:
 # Configure filters
 IGNORE_HEADERS = {"Scenario Chosen"}
 
-def safe_name(value) -> str:
+def safe_name(value, allow_formulas=False) -> str:
     """Return a clean string name for a header cell."""
     s = "" if value is None else str(value).strip()
     # Skip formulas like "=+time_macro!R[1]C[-1]"
-    if s.startswith("="):
+    if not allow_formulas and s.startswith("="):
         return ""
     return s
 
@@ -84,29 +84,8 @@ if "worksheets" in data:
         tables = {}
 
         for r, c, name in header_positions:
-            # ---- WIDTH (columns) ----
-            # Find next header in the SAME row (to the right)
-            next_header_col = None
-            for hc, _hn in headers_by_row[r]:
-                if hc > c:
-                    next_header_col = hc
-                    break
-
-            if next_header_col is not None:
-                width = next_header_col - c
-            else:
-                # No next header in row: extend to rightmost column used in this row
-                if row_cols.get(r):
-                    max_col_in_row = max(row_cols[r])
-                    width = (max_col_in_row - c + 1)
-                else:
-                    width = 1
-
-            if width < 1:  # safety clamp
-                width = 1
-
             # ---- HEIGHT (rows) ----
-            # Find the next header row BELOW this row
+            # Find the next header row BELOW this row to determine the table's boundary
             next_header_row = None
             for hr in header_rows_sorted:
                 if hr > r:
@@ -123,19 +102,61 @@ if "worksheets" in data:
             if height < 1:  # safety clamp
                 height = 1
 
+            # ---- WIDTH (columns) ----
+            # Find the maximum column index within all rows of this table
+            table_start_row = r
+            table_end_row = next_header_row if next_header_row is not None else max_row + 1
+            
+            max_col_in_table = c  # Start with the header's own column
+            for row_idx in range(table_start_row, table_end_row):
+                if row_idx in row_cols and row_cols[row_idx]:
+                    max_col_in_row = max(row_cols[row_idx])
+                    if max_col_in_row > max_col_in_table:
+                        max_col_in_table = max_col_in_row
+            
+            width = max_col_in_table - c + 1
+            if width < 1:
+                width = 1
+
+            # ---- EXTRACT ROW-LEVEL DATA ----
+            row_data = {}
+            for current_r in range(table_start_row + 1, table_end_row):
+                # Get row name from col B (index 1)
+                row_name_cell = cell_map.get((current_r, 1))
+                row_name_val = safe_name(row_name_cell.get("formulaR1C1") if row_name_cell else None)
+
+                if not row_name_val:
+                    continue
+
+                row_item_data = {}
+
+                # "extra info" from column C (index 2)
+                extra_info_cell = cell_map.get((current_r, 2))
+                row_item_data["extra info"] = safe_name(extra_info_cell.get("formulaR1C1") if extra_info_cell else None)
+
+                # "R1C1" from column D (index 3)
+                r1c1_cell = cell_map.get((current_r, 3))
+                row_item_data["R1C1"] = safe_name(
+                    r1c1_cell.get("formulaR1C1") if r1c1_cell else None, allow_formulas=True
+                )
+                
+                row_key = disambiguate(row_name_val, row_data)
+                row_data[row_key] = row_item_data
+
             # Ensure unique key if same name appears multiple times
             key = disambiguate(name, tables)
             tables[key] = {
                 "row numbers": height,
-                "column numbers": width
+                "column numbers": width,
+                "rows": row_data
             }
 
         sheets_dict[sheet_name] = {"tables": tables}
 
 # Define output path
-output_path = os.path.join(os.path.dirname(input_path), "sheets_list.json")
+output_path = os.path.join(os.path.dirname(input_path), "sheet_name_results.json")
 
 with open(output_path, "w") as f:
     json.dump(sheets_dict, f, indent=2)
 
-print(f"✅ New JSON with table sizes saved to {output_path}")
+print(f"✅ New JSON with table dimensions and row data saved to {output_path}")
