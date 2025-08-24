@@ -3,7 +3,7 @@ import os
 from collections import defaultdict
 
 # Path to your existing JSON
-input_path = "/Users/joshualevi/git_projects/playground_reg/debug_20250819_225527_529016.json"
+input_path = "/Users/joshualevi/git_projects/playground_reg/debug_20250824_221119_091828.json"
 
 # Load JSON
 with open(input_path, "r") as f:
@@ -128,17 +128,23 @@ if "worksheets" in data:
                 if not row_name_val:
                     continue
 
+                # Get potential values from columns C and D, allowing formulas from both
+                val_c_cell = cell_map.get((current_r, 2))
+                val_c = safe_name(val_c_cell.get("formulaR1C1") if val_c_cell else None, allow_formulas=True)
+
+                val_d_cell = cell_map.get((current_r, 3))
+                val_d = safe_name(val_d_cell.get("formulaR1C1") if val_d_cell else None, allow_formulas=True)
+
                 row_item_data = {}
-
-                # "extra info" from column C (index 2)
-                extra_info_cell = cell_map.get((current_r, 2))
-                row_item_data["extra info"] = safe_name(extra_info_cell.get("formulaR1C1") if extra_info_cell else None)
-
-                # "R1C1" from column D (index 3)
-                r1c1_cell = cell_map.get((current_r, 3))
-                row_item_data["R1C1"] = safe_name(
-                    r1c1_cell.get("formulaR1C1") if r1c1_cell else None, allow_formulas=True
-                )
+                
+                # Logic: Prioritize Column C. If it contains a formula, it's the R1C1 value.
+                # If it contains text, it's the "extra info" and R1C1 comes from Column D.
+                if val_c and val_c.startswith('='):
+                    row_item_data["R1C1"] = val_c
+                    row_item_data["extra info"] = ""
+                else:
+                    row_item_data["R1C1"] = val_d
+                    row_item_data["extra info"] = val_c
                 
                 row_key = disambiguate(row_name_val, row_data)
                 row_data[row_key] = row_item_data
