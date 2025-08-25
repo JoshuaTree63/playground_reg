@@ -26,3 +26,14 @@
   }
 }
 
+
+
+          "REVENUE - Passenger Car (PC)": {
+            "R1C1": "=SUM(RC[2]:RC[41])",
+            "extra info": "k\u00a3",
+            "depadnacises": ["operation.TRAFFIC & REVENUE ASSUMPTIONS.TRAFFIC - Passenger Car (PC)", "scenarios.TRAFFIC & REVENUE ASSUMPTIONS.Toll Rate - Passenger Car (PC)"]
+          }
+
+
+
+def _get_absolute_row_col(self, reference, current_row_index: int, current_column_index:int):

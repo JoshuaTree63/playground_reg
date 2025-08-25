@@ -12,6 +12,13 @@ with open(input_path, "r") as f:
 # Configure filters
 IGNORE_HEADERS = {"Scenario Chosen"}
 
+# By default, the script will look for the main formula for a row in Column F (index 5).
+# We can define exceptions for sheets that have a different layout.
+DEFAULT_VALUE_COLUMN = 5
+VALUE_COLUMN_EXCEPTIONS = {
+    "scenarios": 3  # For the 'scenarios' sheet, the value is in Column D (index 3)
+}
+
 def safe_name(value, allow_formulas=False) -> str:
     """Return a clean string name for a header cell."""
     s = "" if value is None else str(value).strip()
@@ -128,23 +135,21 @@ if "worksheets" in data:
                 if not row_name_val:
                     continue
 
-                # Get potential values from columns C and D, allowing formulas from both
-                val_c_cell = cell_map.get((current_r, 2))
-                val_c = safe_name(val_c_cell.get("formulaR1C1") if val_c_cell else None, allow_formulas=True)
+                # Get extra info (unit) from column C (index 2)
+                extra_info_cell = cell_map.get((current_r, 2))
+                extra_info_val = safe_name(extra_info_cell.get("formulaR1C1") if extra_info_cell else None)
 
-                val_d_cell = cell_map.get((current_r, 3))
-                val_d = safe_name(val_d_cell.get("formulaR1C1") if val_d_cell else None, allow_formulas=True)
-
-                row_item_data = {}
+                # Get the value column, defaulting to F, with an exception for specific sheets.
+                value_col_index = VALUE_COLUMN_EXCEPTIONS.get(sheet_name, DEFAULT_VALUE_COLUMN)
                 
-                # Logic: Prioritize Column C. If it contains a formula, it's the R1C1 value.
-                # If it contains text, it's the "extra info" and R1C1 comes from Column D.
-                if val_c and val_c.startswith('='):
-                    row_item_data["R1C1"] = val_c
-                    row_item_data["extra info"] = ""
-                else:
-                    row_item_data["R1C1"] = val_d
-                    row_item_data["extra info"] = val_c
+                # Get the main formula/value from the determined column
+                main_value_cell = cell_map.get((current_r, value_col_index))
+                main_value_formula = safe_name(main_value_cell.get("formulaR1C1") if main_value_cell else None, allow_formulas=True)
+
+                row_item_data = {
+                    "R1C1": main_value_formula,
+                    "extra info": extra_info_val
+                }
                 
                 row_key = disambiguate(row_name_val, row_data)
                 row_data[row_key] = row_item_data

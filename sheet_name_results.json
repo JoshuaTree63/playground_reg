@@ -143,7 +143,7 @@
         "column numbers": 44,
         "rows": {
           "Year Number": {
-            "R1C1": "",
+            "R1C1": "=IF(RC[-1]<scenarios!R9C4,RC[-1]+1,0)",
             "extra info": ""
           }
         }
@@ -153,19 +153,19 @@
         "column numbers": 44,
         "rows": {
           "Beginning of construction": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=IF(YEAR(R[-6]C)=YEAR(scenarios!R8C4),1,0)",
             "extra info": ""
           },
           "Construction": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=IF(R[-6]C<=scenarios!R10C4,1,0)",
             "extra info": ""
           },
           "End of construction": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=IF(R[-7]C=scenarios!R10C4,1,0)",
             "extra info": ""
           },
           "Operation": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=IF(R[-2]C>=1,0,1)",
             "extra info": ""
           }
         }
@@ -175,27 +175,27 @@
         "column numbers": 44,
         "rows": {
           "Availability Start Date": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=+R[-6]C",
             "extra info": ""
           },
           "Active": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=+R[-6]C",
             "extra info": ""
           },
           "Availability End Date": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=+R[-6]C",
             "extra info": ""
           },
           "Repayment Start Date": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=IF(R[-16]C=scenarios!R37C4,1,0)",
             "extra info": ""
           },
           "Active (2)": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=IF(SUM(R19C5:R[-1]C)>1,1,0)",
             "extra info": ""
           },
           "Repayment End Date": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=(SUM(R20C5:R[-1]C)=R20C4)*1",
             "extra info": ""
           },
           "http://localhost:8000/debug": {
@@ -213,7 +213,7 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "R1C1": "",
+            "R1C1": "=+time_macro!R[1]C",
             "extra info": ""
           }
         }
@@ -223,11 +223,11 @@
         "column numbers": 44,
         "rows": {
           "Construction Cost": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=scenarios!R27C4/scenarios!R10C4/1000*time_macro!R[4]C",
             "extra info": "k\u00a3"
           },
           "Total Costs": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=SUM(R[-1]C:R[-1]C)",
             "extra info": ""
           }
         }
@@ -237,23 +237,23 @@
         "column numbers": 44,
         "rows": {
           "Construction Cost": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=R[-3]C",
             "extra info": "k\u00a3"
           },
           "Arrangement fee": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=R[15]C",
             "extra info": "k\u00a3"
           },
           "Engagement fee": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=R[15]C",
             "extra info": "k\u00a3"
           },
           "Capitalized Interest": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=R[15]C",
             "extra info": "k\u00a3"
           },
           "Total Uses": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=SUM(R[-4]C:R[-1]C)",
             "extra info": ""
           }
         }
@@ -263,15 +263,15 @@
         "column numbers": 44,
         "rows": {
           "Equity": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=IF(MAX(R33C4-SUM(R17C5:RC[-1]),0)>R[14]C,R[14]C,MAX(R33C4-SUM(R17C5:RC[-1]),0))",
             "extra info": "k\u00a3"
           },
           "Debt": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=IF(R[13]C-R[-1]C>0,R[13]C-R[-1]C,0)",
             "extra info": "k\u00a3"
           },
           "Total Sources": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": ""
           }
         }
@@ -281,27 +281,27 @@
         "column numbers": 44,
         "rows": {
           "Debt Outstanding BoP": {
-            "R1C1": "",
+            "R1C1": "0",
             "extra info": "k\u00a3"
           },
           "Debt Drawdown": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=R[-5]C",
             "extra info": "k\u00a3"
           },
           "Debt Outstanding EoP": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": "k\u00a3"
           },
           "Arrangement fee": {
-            "R1C1": "",
+            "R1C1": "=scenarios!R41C4*construction!R23C4*time_macro!R[-11]C",
             "extra info": "k\u00a3"
           },
           "Engagement fee": {
-            "R1C1": "",
+            "R1C1": "=(R23C4-R[-5]C)*time_macro!R[-11]C*scenarios!R40C4*scenarios!R42C4",
             "extra info": "k\u00a3"
           },
           "Capitalized Interests": {
-            "R1C1": "",
+            "R1C1": "=(scenarios!R39C4+scenarios!R40C4)*R[-6]C*time_macro!R[-12]C",
             "extra info": "k\u00a3"
           }
         }
@@ -311,15 +311,15 @@
         "column numbers": 44,
         "rows": {
           "Uses Total": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "82610.7398372682",
             "extra info": "k\u00a3"
           },
           "Total Debt Amount": {
-            "R1C1": "=R31C4*scenarios!R44C4",
+            "R1C1": "",
             "extra info": "k\u00a3"
           },
           "Total Equity Amount": {
-            "R1C1": "=R31C4*(1-scenarios!R44C4)",
+            "R1C1": "",
             "extra info": "k\u00a3"
           }
         }
@@ -338,7 +338,7 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "R1C1": "",
+            "R1C1": "=+time_macro!R[1]C",
             "extra info": ""
           }
         }
@@ -348,27 +348,27 @@
         "column numbers": 44,
         "rows": {
           "TRAFFIC - Passenger Car (PC)": {
-            "R1C1": "",
+            "R1C1": "=scenarios!R16C4*(1+scenarios!R19C4)^(SUM(time_macro!R12C6:time_macro!R[5]C)-1)*time_macro!R[5]C",
             "extra info": "veh/year"
           },
           "TRAFFIC - Heavy Vehicle (HV)": {
-            "R1C1": "",
+            "R1C1": "=scenarios!R17C4*(1+scenarios!R19C4)^(SUM(time_macro!R12C6:time_macro!R[4]C)-1)*time_macro!R[4]C",
             "extra info": "veh/year"
           },
           "REVENUE - Passenger Car (PC)": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=R[-3]C*scenarios!R22C4/1000",
             "extra info": "k\u00a3"
           },
           "REVENUE - Heavy Vehicle (HV)": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=R[-3]C*scenarios!R23C4/1000",
             "extra info": "k\u00a3"
           },
           "Total Revenue (real)": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": "k\u00a3"
           },
           "Total Revenue (nominal)": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=R[-2]C*(1+scenarios!R20C4)^(R[-11]C-R3C6)",
             "extra info": "k\u00a3"
           }
         }
@@ -378,11 +378,11 @@
         "column numbers": 44,
         "rows": {
           "Maintenance & SPV costs": {
-            "R1C1": "",
+            "R1C1": "=scenarios!R31C4/1000*(1+scenarios!R33C4)^(R[-15]C-R3C6)*time_macro!R[-6]C",
             "extra info": "k\u00a3"
           },
           "Total Costs (nominal)": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": "k\u00a3"
           }
         }
@@ -396,7 +396,7 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "R1C1": "",
+            "R1C1": "=+time_macro!R[1]C",
             "extra info": ""
           }
         }
@@ -406,15 +406,15 @@
         "column numbers": 44,
         "rows": {
           "Asset Value opening": {
-            "R1C1": "",
+            "R1C1": "=R[1]C[-2]+construction!R[24]C",
             "extra info": "k\u00a3"
           },
           "Asset Value closing": {
-            "R1C1": "",
+            "R1C1": "=R[-1]C+R[1]C",
             "extra info": "k\u00a3"
           },
           "Amortization": {
-            "R1C1": "=SUM(RC[2]:RC[41])",
+            "R1C1": "=-construction!R31C4/(scenarios!R9C4-scenarios!R10C4)*time_macro!R[3]C",
             "extra info": "k\u00a3"
           }
         }
@@ -428,7 +428,7 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "R1C1": "",
+            "R1C1": "=+time_macro!R[1]C",
             "extra info": ""
           }
         }
@@ -438,27 +438,27 @@
         "column numbers": 44,
         "rows": {
           "Opening Balance": {
-            "R1C1": "",
+            "R1C1": "=R[3]C[-1]",
             "extra info": "k\u00a3"
           },
           "Drawdowns": {
-            "R1C1": "",
+            "R1C1": "=construction!R[14]C",
             "extra info": "k\u00a3"
           },
           "Principal Repayment": {
-            "R1C1": "",
+            "R1C1": "=IF(time_macro!R[10]C=1,PPMT(scenarios!R39C4+scenarios!R40C4,debt!R[-7]C-debt!R3C9,time_macro!R20C4,construction!R23C4),0)",
             "extra info": "k\u00a3"
           },
           "Closing Balance": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3"
           },
           "Interests": {
-            "R1C1": "",
+            "R1C1": "=-(scenarios!R39C4+scenarios!R40C4)*debt!R[-5]C*time_macro!R[7]C",
             "extra info": "k\u00a3"
           },
           "Debt service": {
-            "R1C1": "",
+            "R1C1": "=(R[-5]C+R[-2]C)*time_macro!R[5]C",
             "extra info": "k\u00a3"
           }
         }
@@ -472,7 +472,7 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "R1C1": "",
+            "R1C1": "=+time_macro!R[1]C",
             "extra info": ""
           }
         }
@@ -482,39 +482,39 @@
         "column numbers": 44,
         "rows": {
           "Gross revenues": {
-            "R1C1": "",
+            "R1C1": "=operation!R[7]C",
             "extra info": "k\u00a3"
           },
           "OPEX": {
-            "R1C1": "",
+            "R1C1": "=-operation!R[11]C",
             "extra info": "k\u00a3"
           },
           "EBITDA": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": "k\u00a3"
           },
           "Amortization": {
-            "R1C1": "",
+            "R1C1": "=amortization!R[-2]C",
             "extra info": "k\u00a3"
           },
           "EBIT": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3"
           },
           "Interest": {
-            "R1C1": "",
+            "R1C1": "=debt!R[-1]C",
             "extra info": "k\u00a3"
           },
           "EBT (Taxable Profit)": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3"
           },
           "Income Tax": {
-            "R1C1": "",
+            "R1C1": "=IF(R[-2]C<0,0,-scenarios!R48C4*'p and l'!R[-2]C)",
             "extra info": "k\u00a3"
           },
           "Net Profit": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3"
           }
         }
@@ -528,7 +528,7 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "R1C1": "",
+            "R1C1": "=+time_macro!R[1]C",
             "extra info": ""
           }
         }
@@ -538,43 +538,43 @@
         "column numbers": 44,
         "rows": {
           "Gross Revenues": {
-            "R1C1": "",
+            "R1C1": "=operation!R[6]C",
             "extra info": "k\u00a3"
           },
           "OPEX (Maintenance & SPV Costs)": {
-            "R1C1": "",
+            "R1C1": "=-operation!R[10]C",
             "extra info": "k\u00a3"
           },
           "Income Tax": {
-            "R1C1": "",
+            "R1C1": "='p and l'!R[7]C",
             "extra info": "k\u00a3"
           },
           "Cash Flow Available for Debt Service (CFADS)": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3"
           },
           "Interest": {
-            "R1C1": "",
+            "R1C1": "=debt!RC",
             "extra info": "k\u00a3"
           },
           "Principal repayment": {
-            "R1C1": "",
+            "R1C1": "=debt!R[-4]C",
             "extra info": "k\u00a3"
           },
           "Cash Flow Available for Equity": {
-            "R1C1": "",
+            "R1C1": "=R[-4]C+R[-2]C+R[-1]C",
             "extra info": "k\u00a3"
           },
           "Dividends": {
-            "R1C1": "",
+            "R1C1": "=-MIN(MAX(scenarios!R49C4*'p and l'!R[1]C,0),MAX(R[-2]C+R[2]C[-1],0))",
             "extra info": "k\u00a3"
           },
           "Net Cash Flow": {
-            "R1C1": "",
+            "R1C1": "=R[-3]C+R[-1]C",
             "extra info": "k\u00a3"
           },
           "Cash in hands": {
-            "R1C1": "",
+            "R1C1": "=RC[-1]+R[-1]C",
             "extra info": "k\u00a3"
           }
         }
@@ -588,7 +588,7 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "R1C1": "",
+            "R1C1": "=+time_macro!R[1]C",
             "extra info": ""
           }
         }
@@ -598,31 +598,31 @@
         "column numbers": 44,
         "rows": {
           "Asset": {
-            "R1C1": "",
+            "R1C1": "=amortization!RC",
             "extra info": "k\u00a3"
           },
           "Cash in hand": {
-            "R1C1": "",
+            "R1C1": "='cash flow'!R[10]C",
             "extra info": "k\u00a3"
           },
           "Total": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": "k\u00a3"
           },
           "Equity": {
-            "R1C1": "",
+            "R1C1": "=SUM(construction!R17C6:R[5]C)",
             "extra info": "k\u00a3"
           },
           "Retained Earnings": {
-            "R1C1": "",
+            "R1C1": "='p and l'!R[5]C+'cash flow'!R[4]C+'balance sheet'!RC[-1]",
             "extra info": "k\u00a3"
           },
           "Debt": {
-            "R1C1": "",
+            "R1C1": "=debt!R[-3]C",
             "extra info": "k\u00a3"
           },
           "Total (2)": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3"
           }
         }
@@ -636,7 +636,7 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "R1C1": "",
+            "R1C1": "=+time_macro!R[1]C",
             "extra info": ""
           }
         }
@@ -646,39 +646,39 @@
         "column numbers": 44,
         "rows": {
           "CAPEX (incl. SPV costs)": {
-            "R1C1": "",
+            "R1C1": "=-construction!R[2]C",
             "extra info": "k\u00a3"
           },
           "Arrangement fee": {
-            "R1C1": "",
+            "R1C1": "=-construction!R[2]C",
             "extra info": "k\u00a3"
           },
           "Engagement fee": {
-            "R1C1": "",
+            "R1C1": "=-construction!R[2]C",
             "extra info": "k\u00a3"
           },
           "Capitalized Interests": {
-            "R1C1": "",
+            "R1C1": "=-construction!R[2]C",
             "extra info": "k\u00a3"
           },
           "Total Investment": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-4]C:R[-1]C)",
             "extra info": "k\u00a3"
           },
           "Revenues PC+HV": {
-            "R1C1": "",
+            "R1C1": "=operation!RC",
             "extra info": "k\u00a3"
           },
           "Maintenance & SPV Costs": {
-            "R1C1": "",
+            "R1C1": "=-operation!R[4]C",
             "extra info": "k\u00a3"
           },
           "Corporate Tax": {
-            "R1C1": "",
+            "R1C1": "='p and l'!R[1]C",
             "extra info": "k\u00a3"
           },
           "Cash Flow": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-5]C:R[-1]C)",
             "extra info": "k\u00a3"
           },
           "Project IRR": {
@@ -692,11 +692,11 @@
         "column numbers": 44,
         "rows": {
           "Equity Injected": {
-            "R1C1": "",
+            "R1C1": "=-construction!R[-6]C",
             "extra info": "k\u00a3"
           },
           "Dividends earned": {
-            "R1C1": "",
+            "R1C1": "=-'cash flow'!R[-7]C",
             "extra info": "k\u00a3"
           },
           "Cash out End of Concession": {
@@ -704,7 +704,7 @@
             "extra info": "k\u00a3"
           },
           "Total Cash in/Cash out": {
-            "R1C1": "",
+            "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3"
           },
           "Equity IRR": {
