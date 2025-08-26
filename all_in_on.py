@@ -38,6 +38,18 @@ def disambiguate(name: str, existing: dict) -> str:
 
 sheets_dict = {}
 
+def col_num_to_letter(col: int) -> str:
+    """Convert column number (1-based) to Excel-style letters."""
+    letters = ""
+    while col > 0:
+        col, remainder = divmod(col - 1, 26)
+        letters = chr(65 + remainder) + letters
+    return letters
+
+def r1c1_to_a1(r: int, c: int) -> str:
+    """Convert absolute row/col indexes (1-based) to A1 cell reference."""
+    return f"{col_num_to_letter(c)}{r}"
+
 if "worksheets" in data:
     for ws in data["worksheets"]:
         sheet_name = ws.get("name")
@@ -146,7 +158,17 @@ if "worksheets" in data:
                 main_value_cell = cell_map.get((current_r, value_col_index))
                 main_value_formula = safe_name(main_value_cell.get("formulaR1C1") if main_value_cell else None, allow_formulas=True)
 
+                if main_value_cell:
+                    cell_row = main_value_cell.get("rowIndex")
+                    cell_col = main_value_cell.get("columnIndex")
+                    a1_ref = r1c1_to_a1(cell_row + 1, cell_col + 1)  # indexes are 0-based in your JSON
+                else:
+                    a1_ref = None
+
+
+
                 row_item_data = {
+                    "cell_name": a1_ref,      
                     "R1C1": main_value_formula,
                     "extra info": extra_info_val
                 }
