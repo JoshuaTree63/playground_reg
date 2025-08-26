@@ -1,8 +1,8 @@
 import json
 
 # Specify the input and output file paths
-input_file_path = r'D:\python projects\playground_reg\debug_20250818_225646_965473.json'
-output_file_path = r'D:\python projects\playground_reg\formula_extract_results.json'
+input_file_path = r'/Users/joshualevi/git_projects/playground_reg/jsonformatter.JSON'
+output_file_path = r'/Users/joshualevi/git_projects/playground_reg/formula_extract_results.json'
 
 # Load the JSON file with UTF-8 encoding
 with open(input_file_path, 'r', encoding='utf-8') as file:
