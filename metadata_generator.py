@@ -6,7 +6,7 @@ from collections import defaultdict
 from formulas_extraction import get_absolute_references
 
 # Path to your existing JSON
-input_path = "/Users/joshualevi/git_projects/playground_reg/debug_20250824_221119_091828.json"
+input_path = "/Users/joshualevi/git_projects/playground_reg/jsonformatter.JSON"
 
 # Load JSON
 with open(input_path, "r", encoding='utf-8') as f:
