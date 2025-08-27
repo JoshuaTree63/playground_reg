@@ -1,0 +1,38 @@
+#to yehoshua - will need to use the metadata_generator JSON to graph all of the excel sheet.
+#link /Users/joshualevi/git_projects/playground_reg/meta_data.json
+
+
+
+# Create a dictionary to represent the graph
+graph = {}
+
+# Extract direct dependencies
+for table in data['time_macro']['tables'].values():
+    for row in table['rows'].values():
+        cell_name = row['cell_name']
+        graph[cell_name] = []
+        for dep in row['dependencies']:
+            dep_cell = f"{dep['sheet']}!R{dep['row']}C{dep['col']}"
+            graph[cell_name].append(dep_cell)
+
+# Function to get all dependencies recursively
+def get_all_dependencies(cell, graph, visited):
+    if cell in visited:
+        return []
+    visited.add(cell)
+    all_deps = []
+    for dep in graph.get(cell, []):
+        all_deps.append(dep)
+        all_deps.extend(get_all_dependencies(dep, graph, visited))
+    return all_deps
+
+# Create a new dictionary for in-depth dependencies
+in_depth_graph = {}
+
+# Populate in-depth dependencies
+for cell in graph.keys():
+    visited = set()
+    in_depth_graph[cell] = get_all_dependencies(cell, graph, visited)
+
+# Convert the in-depth graph dictionary to JSON
+in_depth_graph_json = json.dumps(in_depth_graph, indent=4)
