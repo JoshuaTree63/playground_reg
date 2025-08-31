@@ -1,6 +1,10 @@
 import json
 import os
 from collections import defaultdict
+from dotenv import load_dotenv
+from xai_sdk import Client
+from xai_sdk.chat import user, system
+from sentence_transformers import SentenceTransformer
 
 # Import the formula parsing function from your other script
 from formulas_extraction import get_absolute_references
@@ -21,6 +25,39 @@ DEFAULT_VALUE_COLUMN = 5
 VALUE_COLUMN_EXCEPTIONS = {
     "scenarios": 3  # For the 'scenarios' sheet, the value is in Column D (index 3)
 }
+
+def get_ai_client(project_root):
+    """Initializes and returns the X.AI client."""
+    dotenv_path = os.path.join(project_root, '.env')
+ 
+    if not os.path.exists(dotenv_path):
+        raise FileNotFoundError(f".env file not found at {dotenv_path}")
+
+    load_dotenv(dotenv_path=dotenv_path)
+    api_key = os.getenv("xai_api_key")
+    if not api_key:
+        raise ValueError("API key not found. Make sure .env contains xai_api_key=...")
+
+    return Client(api_key=api_key, timeout=3600) 
+
+def get_definition(client, term, table_name, sheet_name):
+    """Gets a definition for a financial term from the AI."""
+    try:
+        chat = client.chat.create(model="grok-3-mini")
+        chat.append(system(
+            "You are a senior investment banker specializing in valuation and financial modeling, "
+            "particularly in project finance. For each concept, provide a clear, concise definition "
+            "(max 3 sentences) explaining what it is and why it matters in financial modeling. "
+            "Use the provided sheet and table name for additional context."
+        ))
+        chat.append(user(
+            f"In a project finance model, what is '{term}' in the context of the '{table_name}' table on the '{sheet_name}' sheet? Your answer can't be more than 3 sentences."
+        ))
+        response = chat.sample()
+        return response.content
+    except Exception as e:
+        print(f"An error occurred while getting definition for '{term}': {e}")
+        return None
 
 def safe_name(value, allow_formulas=False) -> str:
     """Return a clean string name for a header cell."""
@@ -51,12 +88,47 @@ def r1c1_to_a1(r: int, c: int) -> str:
     """Convert absolute row/col indexes (1-based) to A1 cell reference."""
     return f"{col_num_to_letter(c)}{r}"
 
+def load_existing_definitions_cache(path):
+    """Loads existing metadata to create a cache of definitions and embeddings."""
+    cache = {}
+    if not os.path.exists(path):
+        return cache
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            existing_data = json.load(f)
+        
+        for sheet_name, sheet_data in existing_data.items():
+            for table_name, table_data in sheet_data.get("tables", {}).items():
+                for row_name, row_data in table_data.get("rows", {}).items():
+                    if "definition" in row_data:
+                        cache_key = (sheet_name, table_name, row_name)
+                        cache[cache_key] = {
+                            "definition": row_data["definition"]                            
+                        }
+    except (json.JSONDecodeError, IOError) as e:
+        print(f"Warning: Could not load or parse existing metadata for caching. Error: {e}")
+    return cache
+
 def main():
     """
     Loads raw cell data, parses tables and rows, finds formula dependencies,
-    and saves the complete metadata to a single JSON file.
+    generates definitions and embeddings, and saves the complete metadata
+    to a single JSON file.
     """
     sheets_dict = {}
+
+    # Define output path early for caching
+    output_path = os.path.join(os.path.dirname(input_path), "meta_data.json")
+
+    # --- Setup for definitions and embeddings ---
+    print("Initializing AI client model...")
+    project_root = os.path.dirname(input_path)
+    ai_client = get_ai_client(project_root)
+    embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+    
+    print(f"Checking for existing data in {output_path} to build cache...")
+    definitions_cache = load_existing_definitions_cache(output_path)
+    print(f"Found {len(definitions_cache)} cached definitions.")
 
     if "worksheets" in data:
         for ws in data["worksheets"]:
@@ -166,6 +238,22 @@ def main():
                     else:
                         a1_ref, cell_row, cell_col = None, None, None
 
+                    # --- Get definition and embedding ---
+                    definition = None                    
+                    cache_key = (sheet_name, name, row_name_val) # sheet_name, table_name, row_name
+
+                    if cache_key in definitions_cache:
+                        cached_item = definitions_cache[cache_key]
+                        definition = cached_item.get("definition")                       
+                        # print(f"  - Using cached definition for '{row_name_val}'")
+                    else:
+                        print(f"  - Processing (new): '{row_name_val}' from sheet: '{sheet_name}', table: '{name}'")
+                        definition = get_definition(ai_client, row_name_val, name, sheet_name)
+                        if definition:
+                            print(f"    -> Definition: {definition[:50]}...")                            
+                        else:
+                            print(f"    -> Failed to get definition for '{row_name_val}'. Skipping.")
+
                     # --- PARSE FORMULA DEPENDENCIES ---
                     dependencies = []
                     if main_value_formula and isinstance(main_value_formula, str) and main_value_formula.startswith("="):
@@ -177,12 +265,15 @@ def main():
                                 dependencies.append({"sheet": dep_sheet, "row": dep[1], "col": dep[2]})
 
                     row_item_data = {
-                        "cell_name": a1_ref,      
+                        "source_cell": a1_ref,
                         "R1C1": main_value_formula,
                         "extra info": extra_info_val,
-                        "dependencies": dependencies
                     }
-                    
+
+                    if definition:
+                        row_item_data["definition"] = definition
+                    row_item_data['dependencies'] = dependencies
+
                     row_key = disambiguate(row_name_val, row_data)
                     row_data[row_key] = row_item_data
 
@@ -194,9 +285,6 @@ def main():
                 }
 
             sheets_dict[sheet_name] = {"tables": tables}
-
-    # Define output path
-    output_path = os.path.join(os.path.dirname(input_path), "meta_data.json")
 
     with open(output_path, "w", encoding='utf-8') as f:
         json.dump(sheets_dict, f, indent=2)

@@ -11,9 +11,10 @@
         "column numbers": 8,
         "rows": {
           "Start Date": {
-            "cell_name": "D8",
+            "source_cell": "D8",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "date",
+            "definition": "In the 'TIME ASSUMPTIONS' table on the 'scenarios' sheet of a project finance model, the 'Start Date' refers to the initial date from which the project's timeline begins, such as the commencement of construction or operations. This date serves as the foundational reference point for scheduling cash flows, depreciation, and other time-sensitive projections across different scenarios. It matters because any shift in the start date can significantly impact the model's outputs, including NPV, IRR, and risk assessments, ensuring accurate financial forecasting and scenario analysis.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -33,9 +34,10 @@
             ]
           },
           "Concession Duration": {
-            "cell_name": "D9",
+            "source_cell": "D9",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "years",
+            "definition": "Concession Duration refers to the specified period in a concession agreement where a private entity is granted the rights to develop, operate, and maintain a project, as detailed in the 'TIME ASSUMPTIONS' table on the 'scenarios' sheet. It matters in financial modeling because it defines the timeline for revenue generation, cash flow projections, and debt servicing, directly impacting the project's profitability and risk assessment across different scenarios. This assumption allows analysts to evaluate how changes in duration affect the overall viability and return on investment.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -55,9 +57,10 @@
             ]
           },
           "Construction Duration": {
-            "cell_name": "D10",
+            "source_cell": "D10",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "years",
+            "definition": "Construction Duration, as outlined in the 'TIME ASSUMPTIONS' table on the 'scenarios' sheet, refers to the estimated period required to complete the project's construction phase before operations can begin. This input is critical in financial modeling because it determines the timeline for capital expenditures, financing costs, and the start of revenue generation, directly impacting the project's cash flow projections and overall feasibility. Accurate estimation helps in assessing risks such as delays and their effects on the net present value (NPV) and internal rate of return (IRR).",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -77,9 +80,10 @@
             ]
           },
           "Operations Duration": {
-            "cell_name": "D11",
+            "source_cell": "D11",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "years",
+            "definition": "Operations Duration, as defined in the 'TIME ASSUMPTIONS' table on the 'scenarios' sheet, refers to the estimated length of time the project will be in full operation, generating revenues and incurring operational costs after the construction phase. This assumption is crucial for modeling cash flows over the project's life cycle, as it determines the period for which financial returns are projected. In financial modeling, it directly impacts key metrics like net present value (NPV) and internal rate of return (IRR), helping assess the project's long-term viability and risk.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -99,9 +103,10 @@
             ]
           },
           "End of Licance": {
-            "cell_name": "D12",
+            "source_cell": "D12",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "date",
+            "definition": "It appears \"End of Licance\" is likely a typo for \"End of License,\" which in the 'TIME ASSUMPTIONS' table on the 'scenarios' sheet refers to the projected date when a project's operational license or concession expires. This concept is crucial in financial modeling as it defines the maximum period for revenue generation and cost recovery, directly impacting the project's net present value (NPV) and internal rate of return (IRR). Accurately modeling this date helps assess risks like license renewal uncertainties and ensures realistic cash flow projections in project finance scenarios.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -127,9 +132,10 @@
         "column numbers": 8,
         "rows": {
           "Traffic - Passenger Car (PC)": {
-            "cell_name": "D16",
+            "source_cell": "D16",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "veh/year",
+            "definition": "'Passenger Car (PC)' in the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'scenarios' sheet refers to the estimated volume or growth rate of passenger cars using the project infrastructure, such as a toll road or bridge. This metric is crucial in financial modeling as it directly influences revenue forecasts by determining toll collections or usage fees, which are key to assessing project cash flows and profitability. Accurate PC traffic assumptions help evaluate risks like demand variability and ensure the model's sensitivity analysis reflects realistic scenarios for debt repayment and investment returns.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -149,9 +155,10 @@
             ]
           },
           "Traffic - Heavy Vehicule (HV)": {
-            "cell_name": "D17",
+            "source_cell": "D17",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "veh/year",
+            "definition": "In the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'scenarios' sheet of a project finance model, 'Traffic - Heavy Vehicle (HV)' refers to the estimated or forecasted volume of heavy vehicles, such as trucks and buses, using the infrastructure project. This metric is crucial for revenue projections, as heavy vehicles often generate higher toll or usage fees compared to lighter traffic. In financial modeling, it matters because accurate HV traffic assumptions directly influence cash flow forecasts, risk assessments, and the overall feasibility of the project by accounting for factors like maintenance costs and demand variability.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -171,9 +178,10 @@
             ]
           },
           "Traffic Evolution per year (PC & HV)": {
-            "cell_name": "D19",
+            "source_cell": "D19",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "%",
+            "definition": "' Traffic Evolution per year (PC & HV)' refers to the projected annual changes in the volume of passenger cars (PC) and heavy vehicles (HV) using the infrastructure, as outlined in the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'scenarios' sheet. This metric is essential for forecasting traffic growth rates, which directly influence revenue projections from tolls or usage fees in project finance models. Accurate modeling of this evolution is critical because it affects cash flow estimates, sensitivity analysis, and the overall financial viability of the project under different scenarios.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -193,9 +201,10 @@
             ]
           },
           "Inflation per year": {
-            "cell_name": "D20",
+            "source_cell": "D20",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "%",
+            "definition": "Inflation per year in the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'scenarios' sheet refers to the annual percentage rate assumed for price increases, which is used to adjust future traffic volumes, revenues, or costs in the project finance model to reflect real-world economic changes. This assumption matters because it ensures that financial projections account for the erosion of purchasing power over time, leading to more accurate net present value (NPV) calculations and risk assessments. By incorporating inflation, the model helps stakeholders evaluate the project's long-term profitability under various economic scenarios.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -215,9 +224,10 @@
             ]
           },
           "Toll Rate - Passenger Car (PC)": {
-            "cell_name": "D22",
+            "source_cell": "D22",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "\u00a3",
+            "definition": "In the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'scenarios' sheet, 'Toll Rate - Passenger Car (PC)' refers to the per-vehicle fee charged for passenger cars using a toll road or bridge, which is a key input for estimating revenue based on traffic volume. This rate is typically adjusted for factors like inflation, demand, or regulatory changes across different scenarios. It matters in financial modeling because it directly influences projected cash flows, profitability, and the overall feasibility of the project finance structure.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -237,9 +247,10 @@
             ]
           },
           "Toll Rate - Heavy Vehicule (HV)": {
-            "cell_name": "D23",
+            "source_cell": "D23",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "\u00a3",
+            "definition": "In the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'scenarios' sheet, 'Toll Rate - Heavy Vehicle (HV)' refers to the specific fee charged per heavy vehicle (such as trucks) for using the toll road or infrastructure. This rate is a key input in financial modeling as it directly affects revenue projections by estimating income from HV traffic, which helps assess the project's overall cash flow sensitivity and profitability under different scenarios. Accurate modeling of this rate is crucial for evaluating risks like traffic volume fluctuations and regulatory changes.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -265,9 +276,10 @@
         "column numbers": 8,
         "rows": {
           "CAPEX (including SPV costs)": {
-            "cell_name": "D27",
+            "source_cell": "D27",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "\u00a3",
+            "definition": "CAPEX (including SPV costs) in the 'COSTS DURING CONSTRUCTION' table on the 'scenarios' sheet refers to the capital expenditures incurred during the project's build phase, which include investments in physical assets like equipment and infrastructure, as well as costs associated with establishing the Special Purpose Vehicle (SPV) to manage the project entity. This category captures all upfront funding required to complete construction and ensure the project is operational. In financial modeling, accurately accounting for CAPEX is crucial as it influences cash flow forecasts, debt capacity, and the overall viability of the project finance structure.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -293,9 +305,10 @@
         "column numbers": 8,
         "rows": {
           "Maintenance (including heavy maintenance & SPV costs)": {
-            "cell_name": "D31",
+            "source_cell": "D31",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "\u00a3/year",
+            "definition": "Maintenance (including heavy maintenance & SPV costs) refers to the ongoing operational expenses in a project finance model for routine upkeep, major repairs or overhauls, and costs associated with the Special Purpose Vehicle (SPV) that manages the project, as outlined in the 'COSTS DURING OPERATION' table on the 'scenarios' sheet. These costs are essential for ensuring the project's assets remain functional and compliant over time. In financial modeling, they matter because they directly influence cash flow projections, profitability assessments, and the overall viability of the project by accounting for potential risks and sustainability factors.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -315,9 +328,10 @@
             ]
           },
           "Inflation per year (costs) from beginning of concession": {
-            "cell_name": "D33",
+            "source_cell": "D33",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "%",
+            "definition": "'Inflation per year (costs) from beginning of concession' refers to the annual percentage increase applied to operational costs starting from the start of the project's concession period, as detailed in the 'COSTS DURING OPERATION' table on the 'scenarios' sheet. This parameter adjusts for the erosion of purchasing power over time, ensuring that cost projections in the financial model reflect realistic escalations. It matters in financial modeling because accurate inflation assumptions are critical for reliable cash flow forecasts, risk assessments, and determining the project's long-term profitability in project finance.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -343,9 +357,10 @@
         "column numbers": 8,
         "rows": {
           "Repayment Start Date": {
-            "cell_name": "D37",
+            "source_cell": "D37",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "date",
+            "definition": "In the 'PROJECT FINANCING' table on the 'scenarios' sheet, the Repayment Start Date is the specific date when the principal repayment of the project loan begins, marking the start of the debt amortization period. This date matters in financial modeling because it determines the timing of cash outflows for debt servicing, which directly impacts cash flow projections, debt service coverage ratios, and the overall feasibility of the project under various scenarios. Proper alignment of this date with project milestones ensures accurate sensitivity analysis and risk assessment.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -365,9 +380,10 @@
             ]
           },
           "Repayment End Date": {
-            "cell_name": "D38",
+            "source_cell": "D38",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "date",
+            "definition": "In the 'PROJECT FINANCING' table on the 'scenarios' sheet, the 'Repayment End Date' refers to the final date by which all project loans or debts are scheduled to be fully repaid, marking the end of the debt service period. This date matters in financial modeling because it directly influences cash flow projections, interest expense calculations, and the assessment of project viability across different scenarios. Accurate definition of this date ensures stakeholders can evaluate long-term financial risks and optimize financing structures.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -387,9 +403,10 @@
             ]
           },
           "Base Interest Rate": {
-            "cell_name": "D39",
+            "source_cell": "D39",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "per year",
+            "definition": "In the 'PROJECT FINANCING' table on the 'scenarios' sheet, the base interest rate refers to the benchmark reference rate, such as LIBOR or SOFR, used as a foundation for calculating the interest expense on project loans. It matters in financial modeling because it directly influences the cost of debt, affecting cash flows, debt service coverage ratios, and overall project viability across different scenarios. By adjusting this rate, analysts can perform sensitivity analysis to evaluate the impact of interest rate fluctuations on the project's financial performance.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -409,9 +426,10 @@
             ]
           },
           "Fixed Rate Margin": {
-            "cell_name": "D40",
+            "source_cell": "D40",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "per year",
+            "definition": "Fixed Rate Margin is an additional interest rate component added to a benchmark rate (such as LIBOR or SOFR) to determine the total cost of fixed-rate debt in a project finance model, reflecting the lender's risk premium and profit. In the 'PROJECT FINANCING' table on the 'scenarios' sheet, it serves as a key input variable that allows analysts to model different debt scenarios, assessing how variations in this margin impact the project's cash flows, profitability, and overall financial viability. This is crucial because accurate margin assumptions help in evaluating the sensitivity of the project's returns to changes in borrowing costs.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -431,9 +449,10 @@
             ]
           },
           "Arrangement fee": {
-            "cell_name": "D41",
+            "source_cell": "D41",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "per year",
+            "definition": "An arrangement fee, as detailed in the 'PROJECT FINANCING' table on the 'scenarios' sheet, is a one-time charge paid to banks or financial institutions for arranging and structuring project financing, such as loans or debt syndications. This fee compensates for the lenders' efforts in negotiating terms, underwriting risks, and facilitating the deal. In financial modeling, it matters because it directly impacts initial cash outflows, the overall cost of capital, and project profitability, allowing analysts to accurately forecast net present value and sensitivity across different scenarios.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -453,9 +472,10 @@
             ]
           },
           "Engagement fee": {
-            "cell_name": "D42",
+            "source_cell": "D42",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "of margin",
+            "definition": "An engagement fee in project finance refers to an upfront payment made to financial advisors or arrangers, such as banks, for committing to provide services in structuring and securing financing for a project. In the 'PROJECT FINANCING' table on the 'scenarios' sheet, it is typically modeled as an initial cost that reduces available cash flows and influences the overall financing structure across different scenarios. This fee matters in financial modeling because it directly impacts the project's net present value (NPV) and internal rate of return (IRR) by accounting for early-stage expenses that must be recovered through future revenues.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -475,9 +495,10 @@
             ]
           },
           "Gearing": {
-            "cell_name": "D44",
+            "source_cell": "D44",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "%",
+            "definition": "Gearing, in the context of the 'PROJECT FINANCING' table on the 'scenarios' sheet, refers to the ratio of debt to equity in a project's capital structure, indicating how much financing is leveraged through borrowed funds versus shareholder equity. It matters in financial modeling because it helps assess the project's risk profile, as higher gearing amplifies returns in good scenarios but increases vulnerability to interest rate fluctuations and default risks. In the 'scenarios' sheet, gearing is likely adjusted across different financing options to evaluate their impact on cash flows, profitability, and overall project viability.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -503,9 +524,10 @@
         "column numbers": 8,
         "rows": {
           "Tax Rate": {
-            "cell_name": "D48",
+            "source_cell": "D48",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "%",
+            "definition": "The Tax Rate in the 'TAX & ACCOUNTING ASSUMPTIONS' table on the 'scenarios' sheet refers to the percentage of taxable income that is subject to taxation, based on applicable local, state, or federal laws for the project. This rate is a key input assumption that calculates tax liabilities and adjusts net cash flows in the financial model. It matters because accurate tax rate assumptions directly influence project profitability metrics like NPV and IRR, ensuring realistic valuation and risk assessment in project finance.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -525,9 +547,10 @@
             ]
           },
           "Dividend distribution policy": {
-            "cell_name": "D49",
+            "source_cell": "D49",
             "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
             "extra info": "%",
+            "definition": "In the 'TAX & ACCOUNTING ASSUMPTIONS' table on the 'scenarios' sheet of a project finance model, the dividend distribution policy outlines the rules for allocating profits to shareholders, such as payout ratios, timing, and conditions based on cash flow availability or financial covenants. This policy matters because it directly influences equity returns, cash flow projections, and the overall attractiveness of the project to investors by balancing reinvestment needs with shareholder distributions. In financial modeling, it helps assess different scenarios, like varying economic conditions, to ensure sustainable project financing and compliance with tax and accounting standards.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -557,9 +580,10 @@
         "column numbers": 44,
         "rows": {
           "Year Number": {
-            "cell_name": "F4",
+            "source_cell": "F4",
             "R1C1": "=IF(RC[-1]<scenarios!R9C4,RC[-1]+1,0)",
             "extra info": "",
+            "definition": "In the 'Date' table of the 'time_macro' sheet in a project finance model, 'Year Number' is a sequential integer that identifies each year in the model's timeline, such as 1 for the first year, 2 for the second, and so on. This helps in organizing and referencing time periods for projections, ensuring that cash flows, revenues, and expenses are aligned chronologically. It matters because accurate time sequencing is essential for calculating metrics like net present value (NPV) and internal rate of return (IRR), enabling precise financial forecasting and risk assessment.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -585,9 +609,10 @@
         "column numbers": 44,
         "rows": {
           "Beginning of construction": {
-            "cell_name": "F9",
+            "source_cell": "F9",
             "R1C1": "=IF(YEAR(R[-6]C)=YEAR(scenarios!R8C4),1,0)",
             "extra info": "",
+            "definition": "In the 'Flags' table of the 'time_macro' sheet in a project finance model, 'Beginning of construction' is a binary indicator or date flag that marks the start of the construction phase for a project, signaling when capital expenditures and related activities commence. This flag is crucial in financial modeling because it triggers key timeline events, such as loan disbursements, interest accrual during construction, and cash flow projections, ensuring accurate valuation of the project's lifecycle. By defining this point precisely, the model can align financial assumptions with real-world project timelines, minimizing risks associated with delays or cost overruns.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -602,9 +627,10 @@
             ]
           },
           "Construction": {
-            "cell_name": "F10",
+            "source_cell": "F10",
             "R1C1": "=IF(R[-6]C<=scenarios!R10C4,1,0)",
             "extra info": "",
+            "definition": "In the 'Flags' table on the 'time_macro' sheet of a project finance model, 'Construction' is typically a binary indicator (e.g., 1 for active, 0 for inactive) that signals the period when the project is in its construction phase, marking the time frame for capital expenditures and related activities. This flag is essential for dynamically switching on or off specific model assumptions, such as cost accruals, interest capitalization, and timeline dependencies, to accurately reflect the project's lifecycle. It matters because it ensures precise cash flow forecasting, risk assessment, and financing decisions by aligning financial projections with the actual construction timeline.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -619,9 +645,10 @@
             ]
           },
           "End of construction": {
-            "cell_name": "F11",
+            "source_cell": "F11",
             "R1C1": "=IF(R[-7]C=scenarios!R10C4,1,0)",
             "extra info": "",
+            "definition": "In project finance models, 'End of construction' is a flag in the 'Flags' table on the 'time_macro' sheet that signals the completion of the construction phase, typically marking when the project is ready for operation. This flag matters because it triggers key financial transitions, such as shifting from capital expenditures to revenue generation and debt repayment in cash flow projections. As a result, it ensures accurate modeling of timelines, risks, and returns in project valuation.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -636,9 +663,10 @@
             ]
           },
           "Operation": {
-            "cell_name": "F12",
+            "source_cell": "F12",
             "R1C1": "=IF(R[-2]C>=1,0,1)",
             "extra info": "",
+            "definition": "In the 'Flags' table on the 'time_macro' sheet of a project finance model, 'Operation' is typically a binary flag (e.g., 0 or 1) that indicates whether the project has entered its operational phase, distinguishing it from construction or development stages. This flag matters because it activates specific financial inputs, such as revenue generation, operating expenses, and depreciation schedules, which are critical for accurate cash flow projections and overall project valuation. By clearly delineating operational periods, it helps modelers assess risks, returns, and financing needs more precisely during the project's lifecycle.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -654,9 +682,10 @@
         "column numbers": 44,
         "rows": {
           "Availability Start Date": {
-            "cell_name": "F15",
+            "source_cell": "F15",
             "R1C1": "=+R[-6]C",
             "extra info": "",
+            "definition": "In the 'DEBT TIMELINE' table on the 'time_macro' sheet, the Availability Start Date refers to the specific date when debt financing becomes available for drawdown, marking the beginning of the period in which the project can access borrowed funds. This date is critical in financial modeling as it determines the timing of cash inflows from debt, affects interest accrual calculations, and influences overall project cash flow projections to ensure alignment with construction and operational timelines. Accurately setting this date helps mitigate risks associated with funding delays and ensures the model's feasibility analysis is realistic.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -666,9 +695,10 @@
             ]
           },
           "Active": {
-            "cell_name": "F16",
+            "source_cell": "F16",
             "R1C1": "=+R[-6]C",
             "extra info": "",
+            "definition": "In the 'DEBT TIMELINE' table on the 'time_macro' sheet of a project finance model, 'Active' typically refers to a status indicating that a debt facility is currently operational, such as being available for drawdown, outstanding, or accruing interest during specific periods. This designation helps modelers track when debt is live, ensuring accurate forecasting of cash flows, interest expenses, and repayment obligations. Ultimately, it matters because it directly impacts the project's financial projections, risk assessment, and overall viability by aligning debt dynamics with the timeline of project activities.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -678,9 +708,10 @@
             ]
           },
           "Availability End Date": {
-            "cell_name": "F17",
+            "source_cell": "F17",
             "R1C1": "=+R[-6]C",
             "extra info": "",
+            "definition": "In the 'DEBT TIMELINE' table on the 'time_macro' sheet of a project finance model, the 'Availability End Date' refers to the final date by which the borrower can draw down committed debt funds from lenders. This date is critical because it defines the window for accessing financing, ensuring that project cash flows align with debt availability and preventing overruns that could trigger default or renegotiation. In financial modeling, it matters as it influences the timing of debt scheduling, interest accrual, and overall project viability assessments.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -690,9 +721,10 @@
             ]
           },
           "Repayment Start Date": {
-            "cell_name": "F19",
+            "source_cell": "F19",
             "R1C1": "=IF(R[-16]C=scenarios!R37C4,1,0)",
             "extra info": "",
+            "definition": "The 'Repayment Start Date' in the 'DEBT TIMELINE' table on the 'time_macro' sheet refers to the specific date when the principal repayments on project debt begin, typically after an initial grace period following loan disbursement. This date is critical in financial modeling as it influences cash flow projections, debt service schedules, and the overall feasibility of the project by determining when funds must be allocated for repayments. Accurate modeling of this date helps assess risks like liquidity constraints and ensures compliance with lender covenants.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -707,9 +739,10 @@
             ]
           },
           "Active (2)": {
-            "cell_name": "F20",
+            "source_cell": "F20",
             "R1C1": "=IF(SUM(R19C5:R[-1]C)>1,1,0)",
             "extra info": "",
+            "definition": "In the 'DEBT TIMELINE' table on the 'time_macro' sheet of a project finance model, 'Active' typically refers to a status indicating that a debt facility is currently operational, such as being available for drawdown, outstanding, or accruing interest during specific periods. This designation helps modelers track when debt is live, ensuring accurate forecasting of cash flows, interest expenses, and repayment obligations. Ultimately, it matters because it directly impacts the project's financial projections, risk assessment, and overall viability by aligning debt dynamics with the timeline of project activities.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -724,9 +757,10 @@
             ]
           },
           "Repayment End Date": {
-            "cell_name": "F21",
+            "source_cell": "F21",
             "R1C1": "=(SUM(R20C5:R[-1]C)=R20C4)*1",
             "extra info": "",
+            "definition": "The 'Repayment End Date' in the 'DEBT TIMELINE' table on the 'time_macro' sheet refers to the final date by which the entire principal amount of the debt must be fully repaid, marking the end of the loan's amortization period. This date is critical in financial modeling as it helps structure cash flow projections, calculate total interest expenses, and assess the project's ability to generate sufficient returns to service and retire the debt on time. Accurately defining this date ensures compliance with loan agreements and influences key metrics like net present value and debt service coverage ratios.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -746,9 +780,10 @@
             ]
           },
           "http://localhost:8000/debug": {
-            "cell_name": null,
+            "source_cell": null,
             "R1C1": "",
             "extra info": "",
+            "definition": "It appears that 'http://localhost:8000/debug' is not a recognized financial concept or element in the 'DEBT TIMELINE' table of the 'time_macro' sheet; it may be a placeholder, error, or external reference unrelated to project finance modeling. In project finance, the 'DEBT TIMELINE' table typically tracks key debt-related events like drawdowns, repayments, and interest accruals to forecast cash flows and ensure the project remains solvent. If this is an unintended reference, I recommend verifying the spreadsheet for actual terms like debt schedules or timelines.",
             "dependencies": []
           }
         }
@@ -762,9 +797,10 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "cell_name": "F3",
+            "source_cell": "F3",
             "R1C1": "=+time_macro!R[1]C",
             "extra info": "",
+            "definition": "In the 'Date' table on the 'construction' sheet of a project finance model, 'Year' refers to the specific calendar or fiscal year that outlines the timeline for construction activities, milestones, and associated cash flows. It matters because it provides a structured temporal framework for forecasting costs, revenues, and risks over the project's lifecycle, ensuring accurate financial projections and alignment with funding schedules. This helps stakeholders evaluate the phasing of investments and assess long-term viability.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -780,9 +816,10 @@
         "column numbers": 44,
         "rows": {
           "Construction Cost": {
-            "cell_name": "F6",
+            "source_cell": "F6",
             "R1C1": "=scenarios!R27C4/scenarios!R10C4/1000*time_macro!R[4]C",
             "extra info": "k\u00a3",
+            "definition": "Construction Cost, as outlined in the CAPEX table on the 'construction' sheet, represents the total estimated or actual expenses incurred for building the project infrastructure, including labor, materials, equipment, and related overheads. This figure is essential in financial modeling because it forms a core component of the project's capital expenditure, directly impacting cash flow forecasts, funding requirements, and the overall feasibility analysis. Accurate tracking of these costs helps mitigate risks like budget overruns and ensures reliable projections for return on investment.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -802,9 +839,10 @@
             ]
           },
           "Total Costs": {
-            "cell_name": "F7",
+            "source_cell": "F7",
             "R1C1": "=SUM(R[-1]C:R[-1]C)",
             "extra info": "",
+            "definition": "In the 'CAPEX' table on the 'construction' sheet of a project finance model, 'Total Costs' represents the aggregate of all capital expenditures incurred during the construction phase, including direct costs like materials and labor, as well as indirect costs such as contingencies and overheads. This metric is essential for financial modeling because it provides a comprehensive view of the project's funding requirements, enabling accurate cash flow projections and sensitivity analysis to assess risks and returns. Ultimately, it helps stakeholders determine the feasibility and profitability of the project by ensuring that all construction-related expenses are accounted for in the overall capital budget.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -825,9 +863,10 @@
         "column numbers": 44,
         "rows": {
           "Construction Cost": {
-            "cell_name": "F10",
+            "source_cell": "F10",
             "R1C1": "=R[-3]C",
             "extra info": "k\u00a3",
+            "definition": "Construction Cost, as detailed in the 'Uses' table on the 'construction' sheet, represents the total expenses incurred for building the project, including direct costs like materials, labor, and equipment, as well as indirect costs such as permits and contingencies. It is a key component of the project's capital budget, outlining the funds allocated for development to ensure the project is completed on time and within budget. This cost matters in financial modeling because it directly influences cash flow projections, debt sizing, and overall project feasibility, helping stakeholders assess risks and returns.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -837,9 +876,10 @@
             ]
           },
           "Arrangement fee": {
-            "cell_name": "F11",
+            "source_cell": "F11",
             "R1C1": "=R[15]C",
             "extra info": "k\u00a3",
+            "definition": "In the 'Uses' table on the 'Construction' sheet of a project finance model, the arrangement fee refers to a one-time charge paid to banks or financial arrangers for setting up and structuring the project's debt financing. This fee is essential in financial modeling because it accurately captures the upfront costs of borrowing, which directly affects the total funding requirements and cash flow during the construction phase. By including it, analysts can better assess the project's overall cost of capital and ensure realistic profitability projections.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -849,9 +889,10 @@
             ]
           },
           "Engagement fee": {
-            "cell_name": "F12",
+            "source_cell": "F12",
             "R1C1": "=R[15]C",
             "extra info": "k\u00a3",
+            "definition": "An engagement fee in project finance refers to an upfront payment made to financial advisors or arrangers, such as banks, for committing to provide services in structuring and securing financing for a project. In the 'Uses' table on the 'Construction' sheet, it is typically categorized as an initial cost item that reduces available funds for construction activities. This fee matters in financial modeling because it directly impacts the project's net present value (NPV) and internal rate of return (IRR) by accounting for early-stage expenses that must be recovered through future revenues.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -861,9 +902,10 @@
             ]
           },
           "Capitalized Interest": {
-            "cell_name": "F13",
+            "source_cell": "F13",
             "R1C1": "=R[15]C",
             "extra info": "k\u00a3",
+            "definition": "Capitalized interest refers to the interest expense on loans that is added to the cost of the asset being constructed, rather than expensed immediately, allowing it to be capitalized as part of the project's total investment. In the 'Uses' table on the 'construction' sheet, it represents a key funding component during the build phase, reflecting how borrowed funds are allocated to cover interest costs that accrue before the project generates revenue. This matters in financial modeling because it impacts the balance sheet, cash flow projections, and valuation metrics like NPV, by deferring expenses and altering the timing of cash outflows.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -873,9 +915,10 @@
             ]
           },
           "Total Uses": {
-            "cell_name": "F14",
+            "source_cell": "F14",
             "R1C1": "=SUM(R[-4]C:R[-1]C)",
             "extra info": "",
+            "definition": "In a project finance model, 'Total Uses' in the 'Uses' table on the 'construction' sheet represents the aggregate amount of funds required for all construction-related expenditures, such as land acquisition, equipment, labor, and other costs. This figure is critical for ensuring that the total funding sources (e.g., equity and debt) adequately cover the project's financial needs, thereby maintaining a balanced sources and uses statement. It matters because it directly influences cash flow projections, feasibility assessments, and the overall risk profile of the project during the construction phase.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -896,9 +939,10 @@
         "column numbers": 44,
         "rows": {
           "Equity": {
-            "cell_name": "F17",
+            "source_cell": "F17",
             "R1C1": "=IF(MAX(R33C4-SUM(R17C5:RC[-1]),0)>R[14]C,R[14]C,MAX(R33C4-SUM(R17C5:RC[-1]),0))",
             "extra info": "k\u00a3",
+            "definition": "Equity in the 'Sources' table on the 'Construction' sheet of a project finance model represents the capital contributed by investors or shareholders to fund the project's construction phase, serving as a key component of the overall funding structure alongside debt. This equity acts as a cushion for lenders by absorbing initial risks and losses, ensuring the project can proceed without relying solely on borrowed funds. It matters in financial modeling because it influences the project's capital structure, return on investment calculations, and overall feasibility by determining the equity holders' required returns and the leverage ratio.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -943,9 +987,10 @@
             ]
           },
           "Debt": {
-            "cell_name": "F18",
+            "source_cell": "F18",
             "R1C1": "=IF(R[13]C-R[-1]C>0,R[13]C-R[-1]C,0)",
             "extra info": "k\u00a3",
+            "definition": "In the 'Sources' table on the 'construction' sheet of a project finance model, Debt refers to the borrowed funds, such as loans or bonds, that finance the project's construction phase alongside equity. It is typically structured with specific repayment terms, interest rates, and covenants to ensure the project's viability. Debt matters in financial modeling because it leverages returns for equity holders, affects cash flow projections through interest and principal payments, and influences key metrics like debt service coverage ratios to assess project risk and feasibility.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -970,9 +1015,10 @@
             ]
           },
           "Total Sources": {
-            "cell_name": "F19",
+            "source_cell": "F19",
             "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": "",
+            "definition": "Total Sources in the 'Sources' table on the 'construction' sheet of a project finance model represents the aggregate amount of funding available from various inflows, such as equity injections, debt financing, and other capital contributions, specifically for the construction phase. It matters because it ensures that the total funding aligns with the project's capital requirements, allowing for accurate cash flow forecasting and balance sheet integrity. This total is critical for verifying that sources match uses, thereby assessing the feasibility and financial viability of the project.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -993,15 +1039,17 @@
         "column numbers": 44,
         "rows": {
           "Debt Outstanding BoP": {
-            "cell_name": "F22",
+            "source_cell": "F22",
             "R1C1": "0",
             "extra info": "k\u00a3",
+            "definition": "Debt Outstanding BoP, or Beginning of Period, in the 'Debt Drawdown Schedule' table on the 'construction' sheet, represents the total debt balance carried over from the previous period before any new draws or repayments occur during the current period. This figure is essential in financial modeling as it serves as the starting point for calculating interest expenses, updating debt balances, and ensuring accurate cash flow projections throughout the construction phase. By tracking this metric, analysts can assess the project's leverage and compliance with lending agreements over time.",
             "dependencies": []
           },
           "Debt Drawdown": {
-            "cell_name": "F23",
+            "source_cell": "F23",
             "R1C1": "=R[-5]C",
             "extra info": "k\u00a3",
+            "definition": "Debt drawdown refers to the process by which a project borrows funds from its committed debt facilities in stages, as outlined in the 'Debt Drawdown Schedule' table on the 'construction' sheet, to cover specific costs during the project's construction phase. This schedule details the timing, amounts, and conditions for each draw, ensuring funds are available when needed without over-leveraging. It matters in financial modeling because it directly impacts cash flow projections, interest accrual, and the overall assessment of the project's liquidity and repayment capacity.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -1011,9 +1059,10 @@
             ]
           },
           "Debt Outstanding EoP": {
-            "cell_name": "F24",
+            "source_cell": "F24",
             "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "'Debt Outstanding EoP' refers to the total amount of debt that remains unpaid at the end of a specific period, such as a month or year, in the 'Debt Drawdown Schedule' table on the 'construction' sheet, which tracks borrowings during the project's construction phase. It is calculated by adding new debt drawdowns and subtracting repayments or other adjustments from the previous period's balance. This metric matters in financial modeling as it helps assess the project's leverage, calculate interest expenses, and ensure compliance with debt covenants, thereby informing cash flow projections and risk management.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -1028,9 +1077,10 @@
             ]
           },
           "Arrangement fee": {
-            "cell_name": "F26",
+            "source_cell": "F26",
             "R1C1": "=scenarios!R41C4*construction!R23C4*time_macro!R[-11]C",
             "extra info": "k\u00a3",
+            "definition": "An arrangement fee is a one-time charge paid to lenders or arrangers for setting up and facilitating the debt financing in a project finance model. In the 'Debt Drawdown Schedule' table on the 'construction' sheet, it is typically applied to specific drawdowns during the construction phase, representing an upfront cost deducted from the proceeds or added to the debt balance. This fee matters in financial modeling as it directly affects cash flow projections, total borrowing costs, and the overall profitability of the project, ensuring accurate assessment of financing expenses.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -1050,9 +1100,10 @@
             ]
           },
           "Engagement fee": {
-            "cell_name": "F27",
+            "source_cell": "F27",
             "R1C1": "=(R23C4-R[-5]C)*time_macro!R[-11]C*scenarios!R40C4*scenarios!R42C4",
             "extra info": "k\u00a3",
+            "definition": "An engagement fee is a one-time upfront payment made to lenders or financial advisors for committing to provide debt financing in a project, often recorded in the 'Debt Drawdown Schedule' table on the 'construction' sheet to account for initial costs during the drawdown process. In project finance modeling, this fee is crucial as it directly impacts the project's cash flow by increasing early-stage expenses, thereby affecting the net present value and overall financing structure. Accurately modeling this fee ensures realistic projections of funding requirements and helps evaluate the true cost of capital.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -1082,9 +1133,10 @@
             ]
           },
           "Capitalized Interests": {
-            "cell_name": "F28",
+            "source_cell": "F28",
             "R1C1": "=(scenarios!R39C4+scenarios!R40C4)*R[-6]C*time_macro!R[-12]C",
             "extra info": "k\u00a3",
+            "definition": "Capitalized interests refer to the interest accrued on borrowed funds during the construction phase of a project, which is added to the project's capital costs rather than being expensed immediately, allowing it to be capitalized as part of the asset base. In the 'Debt Drawdown Schedule' table on the 'construction' sheet, this concept is used to calculate and track how interest on drawn-down debt accumulates and impacts the total funding required before operations begin. It matters in financial modeling because it affects the project's total cost, cash flow projections, and overall valuation by deferring interest expenses and influencing debt servicing and profitability assessments.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -1115,21 +1167,24 @@
         "column numbers": 44,
         "rows": {
           "Uses Total": {
-            "cell_name": "F31",
+            "source_cell": "F31",
             "R1C1": "82610.7398372682",
             "extra info": "k\u00a3",
+            "definition": "In the 'Uses of funds for circularity breakdown purpose' table on the 'construction' sheet of a project finance model, 'Uses Total' represents the aggregate sum of all funds allocated for construction-related expenditures, such as equipment, labor, and materials. This total ensures that the model's cash flow projections remain balanced by matching sources of funds with their applications, which is essential for maintaining financial integrity and accuracy. It matters because it helps stakeholders assess project viability, manage budgets, and identify potential funding shortfalls early in the planning process.",
             "dependencies": []
           },
           "Total Debt Amount": {
-            "cell_name": null,
+            "source_cell": null,
             "R1C1": "",
             "extra info": "k\u00a3",
+            "definition": "In the 'Uses of funds for circularity breakdown purpose' table on the 'construction' sheet of a project finance model, 'Total Debt Amount' represents the aggregate value of debt financing allocated for construction-related expenditures, such as building infrastructure or acquiring assets. This figure is crucial because it helps determine the project's capital structure, influences cash flow projections, and assesses financial leverage to ensure the project remains viable and compliant with debt covenants. Understanding this amount is essential for modeling funding sources and evaluating the overall funding circularity during the construction phase.",
             "dependencies": []
           },
           "Total Equity Amount": {
-            "cell_name": null,
+            "source_cell": null,
             "R1C1": "",
             "extra info": "k\u00a3",
+            "definition": "In the 'Uses of funds for circularity breakdown purpose' table on the 'construction' sheet of a project finance model, 'Total Equity Amount' refers to the aggregate sum of equity contributions from investors to cover the project's construction costs and other related expenditures. This figure is essential for establishing the capital structure, as it determines the proportion of funding provided by equity versus debt, ensuring the project meets its financing needs. It matters in financial modeling because it directly impacts key metrics like return on equity, debt service coverage ratios, and overall project viability.",
             "dependencies": []
           }
         }
@@ -1148,9 +1203,10 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "cell_name": "F3",
+            "source_cell": "F3",
             "R1C1": "=+time_macro!R[1]C",
             "extra info": "",
+            "definition": "In the 'Date' table on the 'operation' sheet of a project finance model, 'Year' represents the specific calendar or fiscal year associated with each operational period, serving as a key time dimension for scheduling cash flows and performance metrics. This element is essential because it allows for accurate temporal analysis, enabling stakeholders to forecast revenues, expenses, and returns over the project's lifespan. By structuring data around years, models facilitate discounting future cash flows to present value, which is critical for investment decisions and risk assessment.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -1166,9 +1222,10 @@
         "column numbers": 44,
         "rows": {
           "TRAFFIC - Passenger Car (PC)": {
-            "cell_name": "F7",
+            "source_cell": "F7",
             "R1C1": "=scenarios!R16C4*(1+scenarios!R19C4)^(SUM(time_macro!R12C6:time_macro!R[5]C)-1)*time_macro!R[5]C",
             "extra info": "veh/year",
+            "definition": "'PASSENGER CAR (PC)' in the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'operation' sheet refers to the estimated volume of passenger cars using the project facility, such as a toll road or transport infrastructure, typically measured in annual or daily units. This metric is crucial in financial modeling because it serves as a primary driver for revenue projections, as tolls or usage fees are often based on traffic volume, directly impacting cash flow forecasts and the overall viability of the project. Accurate PC assumptions help in assessing risks like demand fluctuations and performing sensitivity analysis to evaluate potential financial outcomes.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -1198,9 +1255,10 @@
             ]
           },
           "TRAFFIC - Heavy Vehicle (HV)": {
-            "cell_name": "F8",
+            "source_cell": "F8",
             "R1C1": "=scenarios!R17C4*(1+scenarios!R19C4)^(SUM(time_macro!R12C6:time_macro!R[4]C)-1)*time_macro!R[4]C",
             "extra info": "veh/year",
+            "definition": "'Heavy Vehicle (HV)' in the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'operation' sheet refers to an input or assumption for the volume or proportion of large commercial vehicles, such as trucks and buses, in the overall traffic flow for the project. This metric is crucial in financial modeling because it directly influences revenue forecasts, as heavy vehicles often incur higher tolls or usage fees, impacting the project's cash flows and debt repayment capacity. Accurate HV assumptions help assess the sensitivity of the model's outcomes to traffic patterns and ensure robust project viability analyses.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -1230,9 +1288,10 @@
             ]
           },
           "REVENUE - Passenger Car (PC)": {
-            "cell_name": "F10",
+            "source_cell": "F10",
             "R1C1": "=R[-3]C*scenarios!R22C4/1000",
             "extra info": "k\u00a3",
+            "definition": "'REVENUE - Passenger Car (PC)' in the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'operation' sheet refers to the projected income generated from passenger vehicles, such as cars, based on factors like toll fees, traffic volume, and usage rates. This metric is essential in financial modeling for project finance as it helps forecast total revenues, assess the project's cash flow sensitivity to traffic patterns, and evaluate overall profitability and investment returns. Accurate estimation of this revenue component is critical for risk analysis and securing financing in infrastructure projects.",
             "dependencies": [
               {
                 "sheet": "operation",
@@ -1247,9 +1306,10 @@
             ]
           },
           "REVENUE - Heavy Vehicle (HV)": {
-            "cell_name": "F11",
+            "source_cell": "F11",
             "R1C1": "=R[-3]C*scenarios!R23C4/1000",
             "extra info": "k\u00a3",
+            "definition": "In the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'operation' sheet, 'REVENUE - Heavy Vehicle (HV)' represents the projected income generated from fees or tolls paid by heavy vehicles, such as trucks, based on estimated traffic volumes and pricing assumptions. This metric is essential in financial modeling because it forms a key part of the overall revenue forecast, directly influencing cash flow projections, debt repayment capacity, and the assessment of project viability in project finance scenarios.",
             "dependencies": [
               {
                 "sheet": "operation",
@@ -1264,9 +1324,10 @@
             ]
           },
           "Total Revenue (real)": {
-            "cell_name": "F12",
+            "source_cell": "F12",
             "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "Total Revenue (real) in the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'operation' sheet refers to the aggregate income generated from the project, such as tolls or user fees, adjusted to constant prices to exclude the effects of inflation. This metric is calculated based on projected traffic volumes and revenue per unit in real terms, providing a baseline for evaluating the project's financial viability without nominal distortions. It matters in financial modeling because it enables accurate long-term forecasting, sensitivity analysis, and comparison of scenarios by isolating organic growth from inflationary impacts.",
             "dependencies": [
               {
                 "sheet": "operation",
@@ -1281,9 +1342,10 @@
             ]
           },
           "Total Revenue (nominal)": {
-            "cell_name": "F14",
+            "source_cell": "F14",
             "R1C1": "=R[-2]C*(1+scenarios!R20C4)^(R[-11]C-R3C6)",
             "extra info": "k\u00a3",
+            "definition": "Total Revenue (nominal) in the 'TRAFFIC & REVENUE ASSUMPTIONS' table on the 'operation' sheet refers to the projected aggregate income from the project's operations, such as tolls or usage fees, calculated without adjusting for inflation to reflect actual cash flows over time. This metric is derived from assumptions about traffic volumes, pricing structures, and other revenue drivers specific to the project. It matters in financial modeling because it serves as a foundational input for cash flow forecasts, debt repayment analysis, and overall project viability assessments in a nominal context.",
             "dependencies": [
               {
                 "sheet": "operation",
@@ -1314,9 +1376,10 @@
         "column numbers": 44,
         "rows": {
           "Maintenance & SPV costs": {
-            "cell_name": "F18",
+            "source_cell": "F18",
             "R1C1": "=scenarios!R31C4/1000*(1+scenarios!R33C4)^(R[-15]C-R3C6)*time_macro!R[-6]C",
             "extra info": "k\u00a3",
+            "definition": "Maintenance & SPV costs in the 'COSTS' table on the 'operation' sheet represent the ongoing expenses for upkeep of project assets and administrative overheads associated with the Special Purpose Vehicle (SPV), such as repairs, compliance, and management fees. These costs matter in financial modeling because they directly affect operational cash flows, profitability forecasts, and debt service coverage ratios, ensuring a realistic assessment of the project's long-term sustainability. Inaccurate estimation could lead to underestimating total expenses and overestimating returns in the model.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -1346,9 +1409,10 @@
             ]
           },
           "Total Costs (nominal)": {
-            "cell_name": "F19",
+            "source_cell": "F19",
             "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "Total Costs (nominal) in the 'COSTS' table on the 'operation' sheet refers to the aggregate of all operational expenses, such as maintenance, labor, and materials, calculated in current or actual monetary values without adjustments for inflation. This metric matters in financial modeling because it provides a realistic baseline for cash flow projections, enabling accurate budgeting and risk assessment in project finance. By using nominal values, analysts can directly compare projected costs against revenues to evaluate the project's economic viability over time.",
             "dependencies": [
               {
                 "sheet": "operation",
@@ -1373,9 +1437,10 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "cell_name": "F3",
+            "source_cell": "F3",
             "R1C1": "=+time_macro!R[1]C",
             "extra info": "",
+            "definition": "In the 'Date' table of the 'amortization' sheet in a project finance model, 'Year' refers to the specific calendar or fiscal year associated with each row of data, typically outlining the timeline for loan repayments or asset depreciation. This helps in structuring the amortization schedule by aligning cash flows and interest payments to annual periods, ensuring accurate tracking of financial obligations over the project's life. It matters in financial modeling because it facilitates time-based projections, such as net present value calculations and debt service coverage ratios, which are essential for assessing project viability and risk.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -1391,9 +1456,10 @@
         "column numbers": 44,
         "rows": {
           "Asset Value opening": {
-            "cell_name": "F7",
+            "source_cell": "F7",
             "R1C1": "=R[1]C[-2]+construction!R[24]C",
             "extra info": "k\u00a3",
+            "definition": "Asset Value opening, in the 'D&A' table on the 'amortization' sheet of a project finance model, represents the book value of an asset at the start of a given period, serving as the baseline for calculating depreciation or amortization expenses. This value is derived from the previous period's closing balance, adjusted for any additions, disposals, or impairments. It matters because it ensures accurate forecasting of asset depreciation, which directly impacts net income, cash flows, and debt covenants in the overall financial model.",
             "dependencies": [
               {
                 "sheet": "amortization",
@@ -1408,9 +1474,10 @@
             ]
           },
           "Asset Value closing": {
-            "cell_name": "F8",
+            "source_cell": "F8",
             "R1C1": "=R[-1]C+R[1]C",
             "extra info": "k\u00a3",
+            "definition": "In the 'D&A' table on the 'amortization' sheet of a project finance model, 'Asset Value closing' represents the remaining book value of an asset at the end of a specific period, calculated by subtracting that period's depreciation or amortization from the opening value. This figure is essential for tracking asset depreciation over time, which directly impacts financial statements like the balance sheet and income statement. It matters in financial modeling because it influences cash flow projections, tax calculations, and the overall valuation of the project.",
             "dependencies": [
               {
                 "sheet": "amortization",
@@ -1425,9 +1492,10 @@
             ]
           },
           "Amortization": {
-            "cell_name": "F9",
+            "source_cell": "F9",
             "R1C1": "=-construction!R31C4/(scenarios!R9C4-scenarios!R10C4)*time_macro!R[3]C",
             "extra info": "k\u00a3",
+            "definition": "Amortization refers to the systematic allocation of the cost of an intangible asset over its useful life, reducing its book value through periodic expenses in a project finance model. In the 'D&A' table on the 'amortization' sheet, it is typically scheduled alongside depreciation to forecast non-cash expenses that impact net income and cash flows. This matters in financial modeling because it ensures accurate projections of profitability, tax liabilities, and overall project valuation by matching asset costs with the periods they generate revenue.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -1462,9 +1530,10 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "cell_name": "F3",
+            "source_cell": "F3",
             "R1C1": "=+time_macro!R[1]C",
             "extra info": "",
+            "definition": "In the 'Date' table on the 'debt' sheet of a project finance model, 'Year' refers to the specific calendar or fiscal year for which debt-related calculations, such as interest and principal repayments, are projected. This temporal framework is essential for organizing the debt schedule and aligning it with the project's overall timeline, ensuring that cash flows are accurately forecasted. It matters in financial modeling because it enables precise discounting of future cash flows, assessment of debt service coverage ratios, and evaluation of the project's long-term financial viability.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -1480,9 +1549,10 @@
         "column numbers": 44,
         "rows": {
           "Opening Balance": {
-            "cell_name": "F8",
+            "source_cell": "F8",
             "R1C1": "=R[3]C[-1]",
             "extra info": "k\u00a3",
+            "definition": "In the 'Debt Repayment Schedule' table on the 'debt' sheet of a project finance model, the Opening Balance represents the outstanding debt amount carried over from the previous period, serving as the starting point for that period's interest calculations and principal repayments. This figure is crucial because it ensures accurate tracking of debt dynamics over time, allowing for precise forecasting of cash flows, interest expenses, and compliance with debt covenants. Without it, the model would fail to reflect the cumulative impact of prior financing activities on the project's financial health.",
             "dependencies": [
               {
                 "sheet": "debt",
@@ -1492,9 +1562,10 @@
             ]
           },
           "Drawdowns": {
-            "cell_name": "F9",
+            "source_cell": "F9",
             "R1C1": "=construction!R[14]C",
             "extra info": "k\u00a3",
+            "definition": "In a project finance model, drawdowns refer to the scheduled withdrawals of loan funds from a debt facility as needed to finance project costs, rather than receiving the full amount at once. In the 'Debt Repayment Schedule' table on the 'debt' sheet, drawdowns are typically listed to show the timing and amounts of debt being drawn down, which directly influence the subsequent repayment obligations and interest accruals. This matters because accurately modeling drawdowns ensures proper cash flow forecasting, helps assess the project's debt capacity, and evaluates overall financial feasibility.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -1504,9 +1575,10 @@
             ]
           },
           "Principal Repayment": {
-            "cell_name": "F10",
+            "source_cell": "F10",
             "R1C1": "=IF(time_macro!R[10]C=1,PPMT(scenarios!R39C4+scenarios!R40C4,debt!R[-7]C-debt!R3C9,time_macro!R20C4,construction!R23C4),0)",
             "extra info": "k\u00a3",
+            "definition": "Principal Repayment refers to the portion of a debt payment that reduces the original borrowed amount in the 'Debt Repayment Schedule' table on the 'debt' sheet, as opposed to interest which covers the cost of borrowing. In financial modeling for project finance, it is critical for projecting cash flows, ensuring the project generates sufficient funds to amortize debt, and calculating key metrics like the debt service coverage ratio. This helps assess the project's financial feasibility and risk profile over time.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -1546,9 +1618,10 @@
             ]
           },
           "Closing Balance": {
-            "cell_name": "F11",
+            "source_cell": "F11",
             "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "In the 'Debt Repayment Schedule' table on the 'debt' sheet of a project finance model, the 'Closing Balance' represents the outstanding debt amount at the end of a specific period after accounting for draws, repayments, and interest accruals. It is calculated by subtracting the period's repayments and additions from the opening balance, providing a clear snapshot of the debt's remaining liability. This metric matters because it enables accurate tracking of debt amortization, informs cash flow projections, and ensures compliance with lender covenants, which are essential for assessing the project's financial feasibility.",
             "dependencies": [
               {
                 "sheet": "debt",
@@ -1563,9 +1636,10 @@
             ]
           },
           "Interests": {
-            "cell_name": "F13",
+            "source_cell": "F13",
             "R1C1": "=-(scenarios!R39C4+scenarios!R40C4)*debt!R[-5]C*time_macro!R[7]C",
             "extra info": "k\u00a3",
+            "definition": "In the 'Debt Repayment Schedule' table on the 'debt' sheet of a project finance model, 'Interests' refers to the periodic interest payments calculated on the outstanding debt principal, typically based on an agreed interest rate. This component is crucial in financial modeling because it directly affects cash flow projections, helping to assess the project's ability to service debt and evaluate overall profitability. Accurate tracking of interests ensures compliance with loan covenants and supports sensitivity analysis for different interest rate scenarios.",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -1590,9 +1664,10 @@
             ]
           },
           "Debt service": {
-            "cell_name": "F15",
+            "source_cell": "F15",
             "R1C1": "=(R[-5]C+R[-2]C)*time_macro!R[5]C",
             "extra info": "k\u00a3",
+            "definition": "In the 'Debt Repayment Schedule' table on the 'debt' sheet of a project finance model, debt service refers to the total periodic payments required to cover both the principal and interest on the project's borrowed funds. It matters because accurately modeling these payments ensures the project generates sufficient cash flows to meet debt obligations, thereby assessing financial viability and avoiding default risks. This helps in forecasting the project's overall debt repayment timeline and evaluating key metrics like the debt service coverage ratio.",
             "dependencies": [
               {
                 "sheet": "debt",
@@ -1622,9 +1697,10 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "cell_name": "F3",
+            "source_cell": "F3",
             "R1C1": "=+time_macro!R[1]C",
             "extra info": "",
+            "definition": "In the 'Date' table on the 'p and l' sheet of a project finance model, 'Year' represents the specific calendar or fiscal year associated with each row of projected profit and loss data, such as revenues and expenses. This field organizes financial information chronologically, enabling users to track performance trends and calculate key metrics like net income over time. It matters in financial modeling because it provides a foundational timeline for discounting cash flows, conducting scenario analyses, and assessing the project's long-term viability.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -1640,9 +1716,10 @@
         "column numbers": 44,
         "rows": {
           "Gross revenues": {
-            "cell_name": "F7",
+            "source_cell": "F7",
             "R1C1": "=operation!R[7]C",
             "extra info": "k\u00a3",
+            "definition": "Gross revenues in the 'P&L' table on the 'p and l' sheet of a project finance model represent the total income generated from the project's core operations, such as sales of goods or services, before deducting any costs or expenses. This figure is crucial in financial modeling because it serves as the starting point for calculating net income, profitability margins, and cash flow projections, which are essential for assessing the project's viability and securing financing. Accurate gross revenue estimates help identify potential revenue streams and risks, ensuring the model's reliability for decision-making in project finance.",
             "dependencies": [
               {
                 "sheet": "operation",
@@ -1652,9 +1729,10 @@
             ]
           },
           "OPEX": {
-            "cell_name": "F8",
+            "source_cell": "F8",
             "R1C1": "=-operation!R[11]C",
             "extra info": "k\u00a3",
+            "definition": "OPEX, or Operating Expenses, refers to the ongoing costs incurred in running a project, such as salaries, maintenance, utilities, and administrative fees, which are detailed in the 'P&L' table on the 'p and l' sheet. In project finance modeling, OPEX is crucial because it directly impacts the project's profitability by subtracting from revenues to calculate operating income, helping to assess operational efficiency and cash flow forecasts. Accurate modeling of OPEX ensures realistic projections of net income and overall project viability.",
             "dependencies": [
               {
                 "sheet": "operation",
@@ -1664,9 +1742,10 @@
             ]
           },
           "EBITDA": {
-            "cell_name": "F9",
+            "source_cell": "F9",
             "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "EBITDA, or Earnings Before Interest, Taxes, Depreciation, and Amortization, represents a key profitability metric in the 'P&L' table of the 'p and l' sheet, calculated as operating revenue minus operating expenses before these deductions. In project finance modeling, it matters because it provides a clear view of a project's operational cash flow generation, allowing analysts to assess core business performance without the influence of financing structures or non-cash items. This makes EBITDA essential for evaluating debt service capacity, comparing projects, and determining valuation in financial models.",
             "dependencies": [
               {
                 "sheet": "p and l",
@@ -1681,9 +1760,10 @@
             ]
           },
           "Amortization": {
-            "cell_name": "F11",
+            "source_cell": "F11",
             "R1C1": "=amortization!R[-2]C",
             "extra info": "k\u00a3",
+            "definition": "Amortization refers to the gradual write-off of the cost of intangible assets, such as patents or goodwill, over their useful life as a non-cash expense. In the 'P&L' table on the 'p and l' sheet of a project finance model, it is recorded to reduce net income and reflect the consumption of these assets over time. This matters because it provides a more accurate picture of the project's profitability and cash flows, influencing key metrics like EBITDA and investment decisions.",
             "dependencies": [
               {
                 "sheet": "amortization",
@@ -1693,9 +1773,10 @@
             ]
           },
           "EBIT": {
-            "cell_name": "F12",
+            "source_cell": "F12",
             "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "EBIT, or Earnings Before Interest and Taxes, represents a company's operating profit calculated as revenue minus operating expenses, excluding interest and tax effects, as shown in the 'P&L' table on the 'p and l' sheet of a project finance model. It matters because it isolates the core profitability from business operations, allowing analysts to assess a project's performance independently of its financing structure and tax environment. This metric is essential in financial modeling for evaluating cash flow generation, comparing projects, and determining key ratios like debt service coverage.",
             "dependencies": [
               {
                 "sheet": "p and l",
@@ -1710,9 +1791,10 @@
             ]
           },
           "Interest": {
-            "cell_name": "F14",
+            "source_cell": "F14",
             "R1C1": "=debt!R[-1]C",
             "extra info": "k\u00a3",
+            "definition": "In the 'P&L' table on the 'p and l' sheet of a project finance model, 'Interest' represents the expense incurred on borrowed funds, such as loans or debt financing used to fund the project. This figure is typically deducted from operating profit to calculate net income, reflecting the cost of servicing debt. It matters in financial modeling because it directly impacts profitability, cash flow projections, and key metrics like debt service coverage ratios, helping assess the project's financial viability and risk.",
             "dependencies": [
               {
                 "sheet": "debt",
@@ -1722,9 +1804,10 @@
             ]
           },
           "EBT (Taxable Profit)": {
-            "cell_name": "F15",
+            "source_cell": "F15",
             "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "EBT, or Earnings Before Tax (also known as Taxable Profit), represents the profit generated by the project after deducting operating expenses and interest from revenues, but before accounting for income taxes, as shown in the 'P&L' table on the 'p and l' sheet. In project finance modeling, it serves as a key intermediate figure to calculate the tax obligation, which directly impacts net income and cash flows available for debt servicing and equity returns. This makes EBT essential for assessing project viability, performing sensitivity analysis, and ensuring accurate forecasting of financial performance.",
             "dependencies": [
               {
                 "sheet": "p and l",
@@ -1739,9 +1822,10 @@
             ]
           },
           "Income Tax": {
-            "cell_name": "F17",
+            "source_cell": "F17",
             "R1C1": "=IF(R[-2]C<0,0,-scenarios!R48C4*'p and l'!R[-2]C)",
             "extra info": "k\u00a3",
+            "definition": "Income Tax in the P&L table on the 'p and l' sheet represents the tax expense calculated on the project's taxable profits, typically by applying the applicable tax rate to profit before tax. This line item reduces net income and reflects the fiscal obligations to government authorities, ensuring the financial model accurately captures after-tax cash flows. In project finance modeling, it matters because it influences key metrics like return on investment and debt coverage ratios, helping stakeholders assess the project's true profitability and risk profile.",
             "dependencies": [
               {
                 "sheet": "p and l",
@@ -1761,9 +1845,10 @@
             ]
           },
           "Net Profit": {
-            "cell_name": "F18",
+            "source_cell": "F18",
             "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "In the 'P&L' table on the 'p and l' sheet of a project finance model, Net Profit represents the final amount of income left after deducting all operating expenses, interest, taxes, and other deductions from total revenue, essentially showing the project's bottom-line profitability. It is calculated as Revenue minus Cost of Goods Sold, Operating Expenses, Depreciation, Interest, and Taxes. This metric matters in financial modeling because it provides a clear indicator of the project's financial viability, influences investment decisions, and is essential for assessing returns on investment and forecasting future performance.",
             "dependencies": [
               {
                 "sheet": "p and l",
@@ -1788,9 +1873,10 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "cell_name": "F3",
+            "source_cell": "F3",
             "R1C1": "=+time_macro!R[1]C",
             "extra info": "",
+            "definition": "In the 'Date' table on the 'cash flow' sheet of a project finance model, 'Year' represents the specific calendar or fiscal year (e.g., 2023) associated with each row of cash flow data, serving as a key temporal identifier for projections. It matters because it structures the timeline for cash inflows and outflows, enabling accurate forecasting, discounting, and analysis of financial metrics like NPV and IRR. This organization is crucial in project finance for assessing long-term viability and risk over the project's lifespan.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -1806,9 +1892,10 @@
         "column numbers": 44,
         "rows": {
           "Gross Revenues": {
-            "cell_name": "F8",
+            "source_cell": "F8",
             "R1C1": "=operation!R[6]C",
             "extra info": "k\u00a3",
+            "definition": "Gross Revenues in the 'Cashflow Statement' table on the 'cash flow' sheet of a project finance model represent the total income generated from the project's core operations, such as sales of goods, services, or assets, before deducting any expenses or allowances. This figure serves as the starting point for calculating net cash flows, helping to assess the project's revenue-generating potential. It matters in financial modeling because it directly impacts projections of profitability, debt servicing capacity, and overall project viability.",
             "dependencies": [
               {
                 "sheet": "operation",
@@ -1818,9 +1905,10 @@
             ]
           },
           "OPEX (Maintenance & SPV Costs)": {
-            "cell_name": "F9",
+            "source_cell": "F9",
             "R1C1": "=-operation!R[10]C",
             "extra info": "k\u00a3",
+            "definition": "OPEX (Maintenance & SPV Costs) in the 'Cashflow Statement' table on the 'cash flow' sheet refers to the operating expenses incurred for routine maintenance of project assets and administrative costs associated with the Special Purpose Vehicle (SPV), which is the entity structured to manage the project. These costs are deducted from operating cash inflows to determine net cash flow from operations, making them essential for evaluating the project's ongoing viability and profitability. In financial modeling, accurately projecting these expenses helps assess cash flow stability, debt service capacity, and overall investment returns in project finance scenarios.",
             "dependencies": [
               {
                 "sheet": "operation",
@@ -1830,9 +1918,10 @@
             ]
           },
           "Income Tax": {
-            "cell_name": "F10",
+            "source_cell": "F10",
             "R1C1": "='p and l'!R[7]C",
             "extra info": "k\u00a3",
+            "definition": "Income Tax in the 'Cashflow Statement' table on the 'cash flow' sheet of a project finance model represents the cash outflow for taxes payable on the project's taxable income, calculated based on applicable tax rates and rules. It is typically derived from net income after adjusting for non-cash items and is deducted from operating cash flows to determine the net cash available for debt service and distributions. This component matters in financial modeling because it directly impacts the project's cash flow projections, influencing key metrics like internal rate of return (IRR) and debt coverage ratios, which are critical for assessing investment viability and lender requirements.",
             "dependencies": [
               {
                 "sheet": "p and l",
@@ -1842,9 +1931,10 @@
             ]
           },
           "Cash Flow Available for Debt Service (CFADS)": {
-            "cell_name": "F11",
+            "source_cell": "F11",
             "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "In the 'Cashflow Statement' table on the 'cash flow' sheet, Cash Flow Available for Debt Service (CFADS) represents the net cash flow generated by the project after deducting all operating expenses, taxes, reserves, and other obligations, leaving funds specifically available for debt repayment. This metric is critical in financial modeling because it directly measures a project's ability to service debt, influencing key ratios like the debt service coverage ratio (DSCR) and guiding investment decisions. Ultimately, CFADS helps assess the financial viability and risk profile of the project, ensuring lenders and investors can evaluate sustainability.",
             "dependencies": [
               {
                 "sheet": "cash flow",
@@ -1859,9 +1949,10 @@
             ]
           },
           "Interest": {
-            "cell_name": "F13",
+            "source_cell": "F13",
             "R1C1": "=debt!RC",
             "extra info": "k\u00a3",
+            "definition": "In the 'Cashflow Statement' table on the 'cash flow' sheet of a project finance model, 'Interest' represents the expense incurred on borrowed funds, such as loans or bonds, which is typically deducted under operating or financing activities. This item reflects the cost of debt servicing and directly affects net cash flow by reducing available cash for other uses. It matters in financial modeling because it influences key metrics like debt coverage ratios and overall project profitability, helping stakeholders evaluate the feasibility and risk of the financing structure.",
             "dependencies": [
               {
                 "sheet": "debt",
@@ -1871,9 +1962,10 @@
             ]
           },
           "Principal repayment": {
-            "cell_name": "F14",
+            "source_cell": "F14",
             "R1C1": "=debt!R[-4]C",
             "extra info": "k\u00a3",
+            "definition": "Principal repayment refers to the portion of a loan or debt payment that reduces the outstanding principal balance, as opposed to covering interest, and is typically recorded in the financing activities section of the Cashflow Statement table on the 'cash flow' sheet in a project finance model. This outflow is crucial for tracking how debt is amortized over time, ensuring the model accurately reflects the project's cash obligations and liquidity. Understanding principal repayment helps in assessing the financial feasibility of the project, as it directly impacts available cash for operations and potential returns to investors.",
             "dependencies": [
               {
                 "sheet": "debt",
@@ -1883,9 +1975,10 @@
             ]
           },
           "Cash Flow Available for Equity": {
-            "cell_name": "F15",
+            "source_cell": "F15",
             "R1C1": "=R[-4]C+R[-2]C+R[-1]C",
             "extra info": "k\u00a3",
+            "definition": "Cash Flow Available for Equity (CAFE) in the 'Cashflow Statement' table on the 'cash flow' sheet represents the residual cash flow remaining after deducting all operating expenses, debt service obligations, taxes, and reserves from the project's net cash inflows. This metric indicates the amount available for distribution to equity investors, serving as a key indicator of the project's ability to generate returns for shareholders. In financial modeling, CAFE is crucial for calculating equity internal rate of return (IRR) and assessing the overall viability and attractiveness of the investment.",
             "dependencies": [
               {
                 "sheet": "cash flow",
@@ -1905,9 +1998,10 @@
             ]
           },
           "Dividends": {
-            "cell_name": "F17",
+            "source_cell": "F17",
             "R1C1": "=-MIN(MAX(scenarios!R49C4*'p and l'!R[1]C,0),MAX(R[-2]C+R[2]C[-1],0))",
             "extra info": "k\u00a3",
+            "definition": "Dividends in the 'Cashflow Statement' table on the 'cash flow' sheet represent cash distributions paid to equity investors from the project's net profits or retained earnings, typically after servicing debt obligations in project finance models. This line item is crucial as it reflects the return on equity and impacts the project's overall cash flow, helping investors assess the feasibility and attractiveness of the investment. In financial modeling, accurately projecting dividends ensures proper alignment with equity holder expectations and influences key metrics like internal rate of return (IRR).",
             "dependencies": [
               {
                 "sheet": "scenarios",
@@ -1932,9 +2026,10 @@
             ]
           },
           "Net Cash Flow": {
-            "cell_name": "F18",
+            "source_cell": "F18",
             "R1C1": "=R[-3]C+R[-1]C",
             "extra info": "k\u00a3",
+            "definition": "In the 'Cashflow Statement' table on the 'cash flow' sheet of a project finance model, Net Cash Flow is the final line item representing the total cash generated or consumed by the project after accounting for operating, investing, and financing activities, essentially showing the net change in cash position for the period. It is calculated as the sum of cash flows from these categories, providing a clear picture of liquidity and cash availability for debt repayment or reinvestment. This metric matters in financial modeling because it helps assess the project's viability, risk, and ability to generate surplus cash, enabling stakeholders to make informed decisions on funding and operations.",
             "dependencies": [
               {
                 "sheet": "cash flow",
@@ -1949,9 +2044,10 @@
             ]
           },
           "Cash in hands": {
-            "cell_name": "F19",
+            "source_cell": "F19",
             "R1C1": "=RC[-1]+R[-1]C",
             "extra info": "k\u00a3",
+            "definition": "In the 'Cashflow Statement' table on the 'cash flow' sheet of a project finance model, 'Cash in hand' typically refers to the ending cash balance, representing the net cash available to the project after all inflows and outflows for the period. This metric is essential in financial modeling as it provides a clear indicator of the project's liquidity, helping stakeholders assess its ability to cover short-term obligations and operational needs. Accurate tracking of 'Cash in hands' ensures effective cash flow management and supports decision-making for funding or investment strategies in project finance.",
             "dependencies": [
               {
                 "sheet": "cash flow",
@@ -1976,9 +2072,10 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "cell_name": "F3",
+            "source_cell": "F3",
             "R1C1": "=+time_macro!R[1]C",
             "extra info": "",
+            "definition": "In the 'Date' table on the 'balance sheet' sheet of a project finance model, 'Year' typically refers to the specific calendar or fiscal year associated with each row of balance sheet data, serving as a key identifier for temporal organization. This allows for accurate tracking of assets, liabilities, and equity over time, which is essential for forecasting financial performance and assessing project viability. In financial modeling, it matters because it enables proper discounting of cash flows, sensitivity analysis, and alignment with project timelines.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -1994,9 +2091,10 @@
         "column numbers": 44,
         "rows": {
           "Asset": {
-            "cell_name": "F8",
+            "source_cell": "F8",
             "R1C1": "=amortization!RC",
             "extra info": "k\u00a3",
+            "definition": "In the 'Balance Sheet' table on the 'balance sheet' sheet of a project finance model, an \"Asset\" refers to resources owned or controlled by the project entity, such as property, equipment, cash, or receivables, which are expected to provide future economic benefits. These assets are categorized into current (short-term) and non-current (long-term) to reflect their liquidity and help in assessing the project's overall financial health. Understanding assets is crucial in financial modeling as they directly influence key metrics like net worth, leverage ratios, and cash flow projections, enabling investors to evaluate the project's viability and risk.",
             "dependencies": [
               {
                 "sheet": "amortization",
@@ -2006,9 +2104,10 @@
             ]
           },
           "Cash in hand": {
-            "cell_name": "F9",
+            "source_cell": "F9",
             "R1C1": "='cash flow'!R[10]C",
             "extra info": "k\u00a3",
+            "definition": "In the 'Balance Sheet' table on the 'balance sheet' sheet of a project finance model, 'Cash in hand' represents the physical currency and coins held by the company, forming part of current assets under cash and cash equivalents. This item is crucial because it reflects the most immediate liquidity available for meeting short-term obligations, ensuring the project can handle unforeseen expenses or operational needs. In financial modeling, accurately tracking cash in hand helps assess solvency, forecast cash flows, and maintain a realistic view of working capital requirements.",
             "dependencies": [
               {
                 "sheet": "cash flow",
@@ -2018,9 +2117,10 @@
             ]
           },
           "Total": {
-            "cell_name": "F10",
+            "source_cell": "F10",
             "R1C1": "=SUM(R[-2]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "In the 'Balance Sheet' table on the 'balance sheet' sheet of a project finance model, 'Total' typically refers to the aggregated sums of key categories, such as total assets, total liabilities, and total equity, ensuring the accounting equation (Assets = Liabilities + Equity) is balanced. This total is critical in financial modeling as it verifies the model's accuracy and financial health of the project, helping analysts detect errors or inconsistencies early. Ultimately, it supports decision-making by providing a snapshot of the project's net worth at a given point in time.",
             "dependencies": [
               {
                 "sheet": "balance sheet",
@@ -2035,9 +2135,10 @@
             ]
           },
           "Equity": {
-            "cell_name": "F12",
+            "source_cell": "F12",
             "R1C1": "=SUM(construction!R17C6:R[5]C)",
             "extra info": "k\u00a3",
+            "definition": "In the 'Balance Sheet' table of the 'balance sheet' sheet in a project finance model, Equity represents the residual interest in the project's assets after deducting liabilities, including contributions from sponsors and retained earnings. It matters because it reflects the owners' claim on the project and influences key metrics like return on equity (ROE), which helps assess the project's financial viability and risk profile for investors. This component is essential for maintaining a balanced capital structure and ensuring compliance with debt covenants in the model.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -2052,9 +2153,10 @@
             ]
           },
           "Retained Earnings": {
-            "cell_name": "F13",
+            "source_cell": "F13",
             "R1C1": "='p and l'!R[5]C+'cash flow'!R[4]C+'balance sheet'!RC[-1]",
             "extra info": "k\u00a3",
+            "definition": "Retained Earnings represent the cumulative net profits of a company that have been reinvested in the business rather than distributed as dividends, appearing as an equity item in the 'Balance Sheet' table on the 'balance sheet' sheet. This figure is calculated by adding net income and subtracting dividends from the previous period's retained earnings, ensuring the balance sheet balances accurately. In financial modeling for project finance, retained earnings are crucial as they reflect the project's internal funding capacity, influencing equity ratios, solvency, and long-term financial sustainability.",
             "dependencies": [
               {
                 "sheet": "p and l",
@@ -2074,9 +2176,10 @@
             ]
           },
           "Debt": {
-            "cell_name": "F14",
+            "source_cell": "F14",
             "R1C1": "=debt!R[-3]C",
             "extra info": "k\u00a3",
+            "definition": "In the 'Balance Sheet' table on the 'balance sheet' sheet of a project finance model, debt represents the outstanding borrowings, such as loans or bonds, that the project entity owes to lenders, classified under liabilities. It reflects the capital raised to fund the project's assets and operations, which must be repaid with interest over time. This element is critical in financial modeling because it influences the project's cash flow projections, leverage ratios, and overall risk assessment, helping stakeholders evaluate the sustainability of the financing structure.",
             "dependencies": [
               {
                 "sheet": "debt",
@@ -2086,9 +2189,10 @@
             ]
           },
           "Total (2)": {
-            "cell_name": "F15",
+            "source_cell": "F15",
             "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "In the 'Balance Sheet' table on the 'balance sheet' sheet of a project finance model, 'Total' typically refers to the aggregated sums of key categories, such as total assets, total liabilities, and total equity, ensuring the accounting equation (Assets = Liabilities + Equity) is balanced. This total is critical in financial modeling as it verifies the model's accuracy and financial health of the project, helping analysts detect errors or inconsistencies early. Ultimately, it supports decision-making by providing a snapshot of the project's net worth at a given point in time.",
             "dependencies": [
               {
                 "sheet": "balance sheet",
@@ -2113,9 +2217,10 @@
         "column numbers": 44,
         "rows": {
           "Year": {
-            "cell_name": "F3",
+            "source_cell": "F3",
             "R1C1": "=+time_macro!R[1]C",
             "extra info": "",
+            "definition": "In the 'Date' table on the 'ratios' sheet of a project finance model, 'Year' refers to a column or field that specifies the calendar or fiscal year for which financial ratios are calculated and displayed. This helps organize historical and projected data chronologically, facilitating trend analysis and comparisons over time. In financial modeling, accurately defining years ensures precise forecasting and risk assessment for long-term projects.",
             "dependencies": [
               {
                 "sheet": "time_macro",
@@ -2131,9 +2236,10 @@
         "column numbers": 44,
         "rows": {
           "CAPEX (incl. SPV costs)": {
-            "cell_name": "F8",
+            "source_cell": "F8",
             "R1C1": "=-construction!R[2]C",
             "extra info": "k\u00a3",
+            "definition": "CAPEX (incl. SPV costs) refers to the total capital expenditures required for a project, including costs associated with establishing and operating a Special Purpose Vehicle (SPV), which is a legal entity created to isolate the project's financial risks. In the 'Project IRR' table on the 'ratios' sheet, this component is crucial as it represents the initial and ongoing investments that directly impact the project's cash flows and, consequently, the internal rate of return (IRR) calculation. Accurately modeling these costs ensures a realistic assessment of the project's profitability and risk profile.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -2143,9 +2249,10 @@
             ]
           },
           "Arrangement fee": {
-            "cell_name": "F9",
+            "source_cell": "F9",
             "R1C1": "=-construction!R[2]C",
             "extra info": "k\u00a3",
+            "definition": "An arrangement fee is a one-time charge paid to lenders or arrangers for setting up and facilitating the debt financing of a project, typically as a percentage of the loan amount. In the 'Project IRR' table on the 'ratios' sheet, this fee is treated as an upfront cost that reduces the project's initial cash inflows, thereby lowering the calculated Internal Rate of Return (IRR) and providing a more accurate measure of the project's profitability. This ensures that all financing costs are accounted for, helping investors and stakeholders assess the true economic viability of the project.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -2155,9 +2262,10 @@
             ]
           },
           "Engagement fee": {
-            "cell_name": "F10",
+            "source_cell": "F10",
             "R1C1": "=-construction!R[2]C",
             "extra info": "k\u00a3",
+            "definition": "An engagement fee in project finance typically refers to an upfront payment made to financial advisors or arrangers for their commitment to provide services, such as structuring and securing financing for the project. In the context of the 'Project IRR' table on the 'ratios' sheet, this fee is modeled as an initial cash outflow that reduces the project's net cash flows, thereby lowering the calculated internal rate of return (IRR) and providing a more accurate assessment of the investment's profitability. This ensures that all costs are accounted for in financial modeling, helping stakeholders evaluate the true economic viability of the project.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -2167,9 +2275,10 @@
             ]
           },
           "Capitalized Interests": {
-            "cell_name": "F11",
+            "source_cell": "F11",
             "R1C1": "=-construction!R[2]C",
             "extra info": "k\u00a3",
+            "definition": "Capitalized interests refer to the interest expenses on project loans that are added to the project's capital costs during the construction phase rather than being expensed immediately, allowing them to be amortized over the asset's useful life. In the 'Project IRR' table on the 'ratios' sheet, these interests are typically included in the initial cash outflows, which directly impact the calculation of the project's internal rate of return by altering the timing and magnitude of cash flows. This matters in financial modeling because it provides a more accurate representation of the project's profitability and risk profile, as it aligns interest costs with the period when the assets are being developed.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -2179,9 +2288,10 @@
             ]
           },
           "Total Investment": {
-            "cell_name": "F12",
+            "source_cell": "F12",
             "R1C1": "=SUM(R[-4]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "Total Investment, as referenced in the 'Project IRR' table on the 'ratios' sheet, represents the aggregate initial and ongoing capital expenditures required to fund the project, including costs for construction, equipment, and other upfront outlays. It serves as the baseline outflow in the Internal Rate of Return (IRR) calculation, which measures the project's profitability by discounting future cash flows back to their present value. This metric matters in financial modeling because it directly influences the IRR outcome, helping investors assess whether the project's returns justify the capital committed and enabling comparisons across potential investments.",
             "dependencies": [
               {
                 "sheet": "ratios",
@@ -2196,9 +2306,10 @@
             ]
           },
           "Revenues PC+HV": {
-            "cell_name": "F14",
+            "source_cell": "F14",
             "R1C1": "=operation!RC",
             "extra info": "k\u00a3",
+            "definition": "In the 'Project IRR' table on the 'ratios' sheet of a project finance model, 'Revenues PC+HV' refers to the total revenues generated from the primary project contract (PC), such as sales or operational income, plus the handover value (HV), which typically includes residual or terminal values at the end of the project lifecycle. This metric is essential for accurately calculating the Project IRR as it captures all cash inflows, providing a comprehensive assessment of the project's overall profitability and risk. By incorporating both operational revenues and end-of-life values, it helps investors and analysts evaluate the long-term financial viability of the project in financial modeling.",
             "dependencies": [
               {
                 "sheet": "operation",
@@ -2208,9 +2319,10 @@
             ]
           },
           "Maintenance & SPV Costs": {
-            "cell_name": "F15",
+            "source_cell": "F15",
             "R1C1": "=-operation!R[4]C",
             "extra info": "k\u00a3",
+            "definition": "Maintenance & SPV Costs refer to the ongoing operational expenses for maintaining project assets and administering the Special Purpose Vehicle (SPV), a subsidiary entity used to isolate financial risks in project finance. In the 'Project IRR' table on the 'ratios' sheet, these costs are deducted from revenues to calculate net cash flows, which directly influence the Internal Rate of Return (IRR) by reducing profitability metrics. This ensures accurate modeling of the project's financial viability, as overlooking these costs could overestimate returns and lead to poor investment decisions.",
             "dependencies": [
               {
                 "sheet": "operation",
@@ -2220,9 +2332,10 @@
             ]
           },
           "Corporate Tax": {
-            "cell_name": "F16",
+            "source_cell": "F16",
             "R1C1": "='p and l'!R[1]C",
             "extra info": "k\u00a3",
+            "definition": "Corporate Tax, as referenced in the 'Project IRR' table on the 'ratios' sheet, represents the income tax applied to the project's taxable profits after deductions and allowances. It matters in financial modeling because it reduces net cash flows available to investors, directly affecting the calculation of Project IRR and providing a realistic assessment of after-tax returns. Accurate incorporation of corporate tax ensures investment decisions reflect the true economic impact of fiscal obligations on project viability.",
             "dependencies": [
               {
                 "sheet": "p and l",
@@ -2232,9 +2345,10 @@
             ]
           },
           "Cash Flow": {
-            "cell_name": "F17",
+            "source_cell": "F17",
             "R1C1": "=SUM(R[-5]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "In the 'Project IRR' table on the 'ratios' sheet of a project finance model, cash flow represents the net amount of cash generated or expended by the project over specific periods, typically including inflows from revenues and outflows for expenses, investments, and financing. It matters because these cash flows are the key inputs used to calculate the Project IRR, which measures the project's profitability by determining the discount rate that equates the present value of cash inflows to outflows. Accurate cash flow projections in this context enable investors to assess the viability of the project, compare it against hurdles rates, and make informed financing decisions.",
             "dependencies": [
               {
                 "sheet": "ratios",
@@ -2249,9 +2363,10 @@
             ]
           },
           "Project IRR": {
-            "cell_name": null,
+            "source_cell": null,
             "R1C1": "",
             "extra info": "%",
+            "definition": "Project IRR, as detailed in the 'Project IRR' table on the 'ratios' sheet, is the discount rate that makes the net present value (NPV) of a project's cash flows equal to zero, representing the overall profitability from the project's perspective. It matters in financial modeling because it allows investors to evaluate the viability of the project, compare it against the cost of capital, and make informed decisions on funding and execution. In project finance, this metric is particularly important for assessing risks and returns in large-scale infrastructure or development projects.",
             "dependencies": []
           }
         }
@@ -2261,9 +2376,10 @@
         "column numbers": 44,
         "rows": {
           "Equity Injected": {
-            "cell_name": "F23",
+            "source_cell": "F23",
             "R1C1": "=-construction!R[-6]C",
             "extra info": "k\u00a3",
+            "definition": "Equity Injected refers to the initial or additional capital contributions made by equity investors into a project finance venture, typically recorded in the 'Equity IRR' table on the 'ratios' sheet to track cash flows. It represents the total equity funding required to cover project costs before debt financing, serving as a critical input for calculating the Equity Internal Rate of Return (IRR), which measures the profitability and attractiveness of the equity investment. This metric matters in financial modeling because it helps assess the project's risk-return profile, influences financing decisions, and ensures that equity holders can achieve their targeted returns.",
             "dependencies": [
               {
                 "sheet": "construction",
@@ -2273,9 +2389,10 @@
             ]
           },
           "Dividends earned": {
-            "cell_name": "F24",
+            "source_cell": "F24",
             "R1C1": "=-'cash flow'!R[-7]C",
             "extra info": "k\u00a3",
+            "definition": "Dividends earned represent the cash distributions paid to equity investors from the project's net profits or surplus cash flows, serving as a key return on their initial investment. In the 'Equity IRR' table on the 'ratios' sheet, these dividends are factored into the cash flow projections to calculate the Internal Rate of Return (IRR) for equity holders, which measures the project's profitability from their perspective. This component matters in financial modeling because it helps assess the attractiveness of the investment, influences financing decisions, and ensures that equity returns align with investor expectations.",
             "dependencies": [
               {
                 "sheet": "cash flow",
@@ -2285,15 +2402,17 @@
             ]
           },
           "Cash out End of Concession": {
-            "cell_name": null,
+            "source_cell": null,
             "R1C1": "",
             "extra info": "k\u00a3",
+            "definition": "In the 'Equity IRR' table on the 'ratios' sheet of a project finance model, 'Cash out End of Concession' refers to the terminal cash outflow occurring at the end of the project's concession period, such as payments for asset handover or settlement of obligations. This value represents the final financial impact on equity investors, often including costs associated with transferring project assets back to the government or another entity. It matters in financial modeling because it directly influences the calculation of Equity IRR, providing a critical measure of long-term profitability and risk for investors by accounting for end-of-life cash flows.",
             "dependencies": []
           },
           "Total Cash in/Cash out": {
-            "cell_name": "F26",
+            "source_cell": "F26",
             "R1C1": "=SUM(R[-3]C:R[-1]C)",
             "extra info": "k\u00a3",
+            "definition": "In the 'Equity IRR' table on the 'ratios' sheet of a project finance model, 'Total Cash in/Cash out' refers to the net cash flows from the perspective of equity investors, where 'Cash in' includes inflows like dividends or proceeds from asset sales, and 'Cash out' includes outflows such as initial equity contributions or additional funding. This metric is calculated to determine the equity internal rate of return (IRR), which measures the profitability and timing of these cash flows over the project's lifecycle. It matters because it helps investors assess the risk-adjusted return on their equity investment, enabling comparisons with other opportunities and informing financing decisions.",
             "dependencies": [
               {
                 "sheet": "ratios",
@@ -2308,9 +2427,10 @@
             ]
           },
           "Equity IRR": {
-            "cell_name": null,
+            "source_cell": null,
             "R1C1": "",
             "extra info": "%",
+            "definition": "Equity IRR, or Internal Rate of Return on equity, is a financial metric that calculates the annualized rate of return that equity investors can expect from a project, based on the net cash flows attributable to them after debt servicing. In the 'Equity IRR' table on the 'ratios' sheet, it's typically derived from projected equity cash inflows and outflows over the project's lifecycle, providing a clear view of investment performance. This metric matters in financial modeling because it helps investors assess profitability, compare opportunities, and determine if the project meets their required return thresholds, guiding key financing decisions.",
             "dependencies": []
           }
         }

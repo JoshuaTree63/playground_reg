@@ -12,13 +12,13 @@
         "rows": {
           "Start Date": {
             "cell_name": "D8",
-            "R1C1": "=@INDEX(RC[2]:RC[11],R3C4)",
+            "R1C1": "=@INDEX(RC[@shee2]:RC[11],R3C4)",
             "extra info": "date",
             "dependencies": [
               {
                 "sheet": "scenarios",
                 "row": 7,
-                "col": 5
+                "col": 3
               },
               {
                 "sheet": "scenarios",

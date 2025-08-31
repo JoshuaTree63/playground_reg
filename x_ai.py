@@ -11,23 +11,15 @@ def main():
     # Build the path to the .env file relative to this script's location
     script_dir = os.path.dirname(__file__)
     dotenv_path = os.path.join(script_dir, '.env')
-    
-    # Debug: Print the path and check if file exists
-    print(f"Looking for .env file at: {dotenv_path}")
+
     if not os.path.exists(dotenv_path):
         raise FileNotFoundError(f".env file not found at {dotenv_path}")
-    
-    # Debug: Print raw contents of .env file
-    with open(dotenv_path, 'r') as f:
-        print(f"Raw .env file contents: {f.read().strip()}")
-    
+
     # Load the .env file
     load_dotenv(dotenv_path=dotenv_path)
 
     # Get the API key from .env
     api_key = os.getenv("xai_api_key")
-    # Debug: Print the loaded API key
-    print(f"Loaded API key: {api_key}")
     if not api_key:
         raise ValueError("API key not found. Make sure .env contains xai_api_key=...")
 
